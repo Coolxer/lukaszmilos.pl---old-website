@@ -50,12 +50,8 @@ const schema: Schema = {
   schema={schema}>
   <Section center>
     <div class="flex max-w-prose flex-col gap-4 md:text-center">
-      <p class="text-h2">
-        Zacznij działać w sieci i <span class="text-accent">
-          zbuduj swoją bazę, pozycję i kapitał na przyszłość.
-        </span>
-      </p>
-    </div><Row maxColumns={2} placement="items-stretch"
+      <p class="text-h2">Zacznij działać lub popraw się w sieci</p>
+    </div><Row maxColumns={3} placement="items-stretch"
       ><div
         class="flex flex-col justify-between gap-8 rounded bg-gray-light p-8 shadow-sm">
         <div class="h-64">
@@ -113,33 +109,22 @@ const schema: Schema = {
           class="self-stretch md:self-start">
           Sprawdź ofertę tworzenia sklepu
         </Button>
-      </div></Row
-    ></Section
-  >
-
-  <Section center class="bg-gray-light"
-    ><div class="flex max-w-prose flex-col gap-4 md:text-center">
-      <p class="text-h2">
-        Zmień swoją stronę (sklep) www na lepszą - <span class="text-accent">
-          zyskaj widoczność, wiarygodność i lepszą skuteczność
-        </span>
-      </p>
-    </div><div
-      class="flex w-full flex-col justify-between gap-8 rounded bg-gray-lightest p-8 shadow-sm md:w-1/2">
-      <div class="h-64">
-        <MyImage
-          src="pages/poprawa-strony-www.webp"
-          alt="Tablet wyświetlający grafikę strony internetowej, a wokół widoczne są różne elementy i narzędzia naprawcze."
-        />
-      </div><div class="flex max-w-prose flex-col gap-4">
-        <h2 class="text-h4">Poprawa strony internetowej lub sklepu</h2><p
-          class="text-lg">
-          Zleć poprawę swojej strony internetowej by nie tylko prezentowała się
-          lepiej dla Ciebie i Twoich klientów, ale dawała także lepsze
-          rezultaty.
-        </p>
-      </div>
-      <!-- <IconList
+      </div><div
+        class="flex flex-col justify-between gap-8 rounded bg-gray-light p-8 shadow-sm">
+        <div class="h-64">
+          <MyImage
+            src="pages/poprawa-strony-www.webp"
+            alt="Tablet wyświetlający grafikę strony internetowej, a wokół widoczne są różne elementy i narzędzia naprawcze."
+          />
+        </div><div class="flex max-w-prose flex-col gap-4">
+          <h2 class="text-h4">Poprawa strony internetowej lub sklepu</h2><p
+            class="text-lg">
+            Zleć poprawę swojej strony internetowej by nie tylko prezentowała
+            się lepiej dla Ciebie i Twoich klientów, ale dawała także lepsze
+            rezultaty.
+          </p>
+        </div>
+        <!-- <IconList
           class="text-gray-dark"
           items={[
             "Gdzie zauważasz problem?",
@@ -147,20 +132,19 @@ const schema: Schema = {
             "W czym potrzebujesz pomocy?",
           ]}
         /> -->
-      <Button
-        link={buildSlug("/oferta/poprawa-strony-www")}
-        class="self-stretch md:self-start">
-        Sprawdź ofertę poprawy strony
-      </Button>
-    </div>
-  </Section>
+        <Button
+          link={buildSlug("/oferta/poprawa-strony-www")}
+          class="self-stretch md:self-start">
+          Sprawdź ofertę poprawy strony
+        </Button>
+      </div></Row
+    ></Section
+  >
 
   <Section center class="bg-accent-darkest text-white"
     ><div class="flex max-w-prose flex-col gap-4 md:text-center">
       <p class="text-h2">
-        Korzystaj z cyfryzacji i automatyzacji. <span class="text-accent-light">
-          Upraszczaj pracę, minimalizuj błędy i oszczędzaj czas!
-        </span>
+        Upraszczaj pracę, minimalizuj błędy i oszczędzaj czas!
       </p>
     </div><Row maxColumns={2} placement="items-stretch"
       ><div
