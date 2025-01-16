@@ -55,7 +55,9 @@ const schema: Schema = {}
           </p>
 
           <div class="flex flex-col gap-4 self-stretch lg:flex-row">
-            <Button link={buildSlug("/kontakt")}>Zamów bezpłatną wycenę</Button>
+            <Button link={buildSlug("/kontakt")}
+              >Opowiedz o swoim projekcie</Button
+            >
             <Button link={buildSlug("/kontakt")} variant="secondary"
               >Skontaktuj się</Button
             >
@@ -172,7 +174,7 @@ const schema: Schema = {}
         Zdecydowany(a)? Zbudujmy razem Twój sklep internetowy
       </h2>
       <div class="flex flex-col gap-4 self-stretch lg:flex-row lg:self-center">
-        <Button link={buildSlug("/kontakt")}>Zamów bezpłatną wycenę</Button>
+        <Button link={buildSlug("/kontakt")}>Opowiedz o swoim projekcie</Button>
         <Button link={buildSlug("/kontakt")} variant="tetriary"
           >Skontaktuj się</Button
         >
@@ -213,7 +215,7 @@ const schema: Schema = {}
     <Row placement="items-stretch"
       ><div
         class="flex flex-col gap-4 rounded bg-accent-dark px-4 py-8 shadow-sm">
-        <h4 class="text-h5">Zawsze</h4>
+        <h4 class="text-center text-h5">Zawsze</h4>
         <IconList
           items={[
             "dopasowany projekt graficzny (szablon lub dedykowany)",
@@ -226,10 +228,11 @@ const schema: Schema = {}
             "dodanie sklepu do wyszukiwarki",
             "wsparcie w obsłudze sklepu",
           ]}
+          class="text-accent-lightest"
         />
       </div><div
         class="flex flex-col gap-4 rounded bg-accent-dark px-4 py-8 shadow-sm">
-        <h4 class="text-h5">Opcjonalnie</h4>
+        <h4 class="text-center text-h5">Opcjonalnie</h4>
         <IconList
           items={[
             "zaawansowane warianty, wyszukiwanie i filtry",
@@ -244,45 +247,13 @@ const schema: Schema = {}
             "wsparcie w procesie integracji z magazynem i dodatkowych automatyzacji",
             "... wszystko inne, czego potrzebujesz",
           ]}
+          class="text-accent-lightest"
         />
       </div></Row
     ></Section
   >
 
-  <Section center class="bg-gray-light"
-    ><div class="flex max-w-prose flex-col gap-4 md:text-center">
-      <h2>Najlepsza technologia dla Twojego sklepu www</h2><p class="text-lg">
-        Bazując na mojej wiedzy i doświadczeniu, staram się nie ograniczać, co
-        do technologii, ale mam swoje wybory, które dostosowuję do sytuacji i
-        wymagań.
-      </p>
-    </div><Row maxColumns={3} placement="items-stretch"
-      ><div
-        class="flex flex-col gap-4 rounded bg-gray-lightest px-4 py-8 shadow-sm">
-        <h3 class="text-h5">Wordpress Woocommerce</h3><p>
-          Wordpress z natywnym edytorem Gutenberg to aktualnie mój pierwszy
-          wybór w kontekście sklepu www. Korzystam z zestawu narzędzi Kadence,
-          Spectra lub Greenshift.
-        </p>
-      </div><div
-        class="flex flex-col gap-4 rounded bg-gray-lightest px-4 py-8 shadow-sm">
-        <h3 class="text-h5">Webflow</h3><p>
-          Webflow jest bezpiecznym i nowoczesnym, ale płatnym rozwiązaniem do
-          tworzenia stron i sklepów www. Jeśli masz chęć to możemy tutaj też
-          podziałać.
-        </p>
-      </div><div
-        class="flex flex-col gap-4 rounded bg-gray-lightest px-4 py-8 shadow-sm">
-        <h3 class="text-h5">Inne rozwiązania</h3><p>
-          Jestem otwarty na współpracę z innymi technologiami, zarówno bardziej
-          deweloperskimi (prestashop, magento) jak i tzw. gotowcami typu saas
-          (shoper, shopify, itp.).
-        </p>
-      </div></Row
-    ></Section
-  >
-
-  <Section>
+  <!-- <Section>
     <Row>
       <div class="flex flex-col gap-4">
         <h2>Chodzi o to, aby zrobić to dobrze i skutecznie</h2>
@@ -317,7 +288,7 @@ const schema: Schema = {}
         />
       </div>
     </Row>
-  </Section>
+  </Section> -->
 
   <Section class="bg-gray-light">
     <Row
@@ -355,7 +326,33 @@ const schema: Schema = {}
     </Row>
   </Section>
 
-  <Section>
+  <Section center class="bg-gray-lightest"
+    ><div class="flex max-w-prose flex-col gap-4 md:text-center">
+      <h2>Najlepsza technologia dla Twojego sklepu www</h2><p class="text-lg">
+        Bazując na mojej wiedzy i doświadczeniu, staram się nie ograniczać, co
+        do technologii, ale mam swoje wybory, które dostosowuję do sytuacji i
+        wymagań.
+      </p>
+    </div><Row placement="items-stretch"
+      ><div
+        class="flex flex-col gap-4 rounded bg-gray-light px-4 py-8 shadow-sm">
+        <h3 class="text-h5">Wordpress Woocommerce</h3><p>
+          Wordpress z natywnym edytorem Gutenberg to aktualnie mój pierwszy
+          wybór w kontekście sklepu www. Korzystam z zestawu narzędzi Kadence,
+          Spectra lub Greenshift.
+        </p>
+      </div><div
+        class="flex flex-col gap-4 rounded bg-gray-light px-4 py-8 shadow-sm">
+        <h3 class="text-h5">Inne rozwiązania</h3><p>
+          Jestem otwarty na współpracę z innymi technologiami, zarówno bardziej
+          deweloperskimi (prestashop, magento) jak i tzw. gotowcami typu saas
+          (shoper, shopify, itp.).
+        </p>
+      </div></Row
+    ></Section
+  >
+
+  <Section class="bg-gray-light">
     <Row>
       <div class="flex flex-col items-start justify-center gap-8">
         <div class="flex flex-col gap-4">
@@ -379,13 +376,17 @@ const schema: Schema = {}
                 "rodzaju i ilości stworzonej treści",
                 "dodatkowych materiałów",
               ].map((item) => (
-                <div class="bg-accent-lightest px-4 py-2">{item}</div>
+                <div class="bg-gray-lightest px-4 py-2 text-gray-dark">
+                  {item}
+                </div>
               ))
             }
           </div>
         </div>
         <div class="flex flex-col gap-4 self-stretch lg:flex-row">
-          <Button link={buildSlug("/kontakt")}>Zamów bezpłatną wycenę</Button>
+          <Button link={buildSlug("/kontakt")}
+            >Opowiedz o swoim projekcie</Button
+          >
           <Button link={buildSlug("/kontakt")} variant="secondary"
             >Skontaktuj się</Button
           >
@@ -399,7 +400,7 @@ const schema: Schema = {}
     </Row>
   </Section>
 
-  <Section class="bg-gray-light">
+  <Section class="bg-gray-lightest">
     <Row
       ><div class="order-2 md:order-1">
         <MyImage
@@ -414,7 +415,6 @@ const schema: Schema = {}
         <IconList
           items={[
             "Zbadanie potrzeb i ustalenie priorytetów",
-            "Wykonanie przeglądu rynku i konkurencji (jeśli tak ustalono)",
             "Określenie zakresu i rodzaju prac",
             "Zebranie niezbędnych materiałów",
             "Przygotowanie pierwszej części realizacji",
@@ -489,7 +489,7 @@ const schema: Schema = {}
     </p>
 
     <div class="flex w-full flex-col justify-center gap-4 md:flex-row">
-      <Button link={buildSlug("/kontakt")}>Zamów bezpłatną wycenę</Button>
+      <Button link={buildSlug("/kontakt")}>Opowiedz o swoim projekcie</Button>
       <Button variant="secondary" link={buildSlug("/kontakt")}
         >Skontaktuj się
       </Button>

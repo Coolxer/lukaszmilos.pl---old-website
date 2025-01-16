@@ -100,7 +100,9 @@ const schema: Schema = {}
           ]}
         />
         <div class="flex flex-col gap-4 self-stretch lg:flex-row">
-          <Button link={buildSlug("/kontakt")}>Zamów bezpłatną wycenę</Button>
+          <Button link={buildSlug("/kontakt")}
+            >Opowiedz o swoim projekcie</Button
+          >
           <Button link={buildSlug("/kontakt")} variant="secondary"
             >Skontaktuj się</Button
           >
@@ -193,16 +195,16 @@ const schema: Schema = {}
             "bezpieczna",
             "podstawowo zgodna z GDPR",
             "zoptymalizowana technicznie pod SEO",
-            "łatwą w zarządzaniu i obsłudze",
-            "nastawioną na zdobywanie celów",
+            "łatwa w zarządzaniu i obsłudze",
+            "nastawiona na osiąganie celów",
           ].map((item) => (
-            <div class="bg-accent-lightest px-4 py-2">{item}</div>
+            <div class="bg-accent-dark px-4 py-2 text-accent-light">{item}</div>
           ))
         }
       </div>
       <div
         class="mt-8 flex flex-col gap-4 self-stretch lg:flex-row lg:self-start">
-        <Button link={buildSlug("/kontakt")}>Zamów bezpłatną wycenę</Button>
+        <Button link={buildSlug("/kontakt")}>Opowiedz o swoim projekcie</Button>
         <Button link={buildSlug("/kontakt")} variant="tetriary"
           >Skontaktuj się</Button
         >
@@ -217,7 +219,7 @@ const schema: Schema = {}
         do technologii, ale mam swoje wybory, które dostosowuję do sytuacji i
         wymagań.
       </p>
-    </div><Row maxColumns={3} placement="items-stretch"
+    </div><Row placement="items-stretch"
       ><div class="flex flex-col gap-4 rounded bg-gray-lightest p-8 shadow-sm">
         <h3 class="text-h5">Astro</h3><p>
           Tzw. generator stron statycznych, w którym jednak strona jest
@@ -233,18 +235,10 @@ const schema: Schema = {}
           wdrażania, ale wadą bezpieczeństwo, awaryjność i koszty utrzymania. Do
           większości stron polecam Astro.
         </p>
-      </div><div
-        class="flex flex-col gap-4 rounded bg-gray-lightest p-8 shadow-sm">
-        <h3 class="text-h5">Webflow</h3><p>
-          Webflow jest pewnym kompromisem pomiędzy Astro i Wordpress, dając
-          wygodę i bezpieczeństwo. Płacąc abonament zyskujemy pewność co do
-          zabezpieczenia i możliwie poprawnego działania. Wygoda tworzenia także
-          jest duża.
-        </p>
-      </div></Row
-    ></Section
-  >
-
+        <!-- </div> -->
+      </div>
+    </Row>
+  </Section>
   <Section>
     <Row
       ><div class="order-2 md:order-1">
@@ -304,13 +298,17 @@ const schema: Schema = {}
                 "rodzaju i ilości stworzonej treści",
                 "dodatkowych materiałów",
               ].map((item) => (
-                <div class="bg-accent-lightest px-4 py-2">{item}</div>
+                <div class="bg-gray-lightest px-4 py-2 text-gray-dark">
+                  {item}
+                </div>
               ))
             }
           </div>
         </div>
         <div class="flex flex-col gap-4 self-stretch lg:flex-row">
-          <Button link={buildSlug("/kontakt")}>Zamów bezpłatną wycenę</Button>
+          <Button link={buildSlug("/kontakt")}
+            >Opowiedz o swoim projekcie</Button
+          >
           <Button link={buildSlug("/kontakt")} variant="secondary"
             >Skontaktuj się</Button
           >
@@ -339,7 +337,6 @@ const schema: Schema = {}
         <IconList
           items={[
             "Zbadanie potrzeb i ustalenie priorytetów",
-            "Wykonanie przeglądu rynku i konkurencji (jeśli tak ustalono)",
             "Określenie zakresu i rodzaju prac",
             "Zebranie niezbędnych materiałów",
             "Przygotowanie pierwszej części realizacji",
@@ -423,7 +420,7 @@ const schema: Schema = {}
     </p>
 
     <div class="flex w-full flex-col justify-center gap-4 md:flex-row">
-      <Button link={buildSlug("/kontakt")}>Zamów bezpłatną wycenę</Button>
+      <Button link={buildSlug("/kontakt")}>Opowiedz o swoim projekcie</Button>
       <Button variant="secondary" link={buildSlug("/kontakt")}
         >Skontaktuj się
       </Button>

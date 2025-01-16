@@ -38,7 +38,8 @@ const schema: Schema = {
       ><div class="flex flex-col justify-center gap-8">
         <div class="flex flex-col gap-4">
           <h1>
-            Pomagam firmom <span class="text-accent">lepiej</span> korzystać z technologii
+            Pomagam firmom MŚP <span class="text-accent">lepiej</span> korzystać
+            z technologii
           </h1>
           <p class="text-h5 text-accent">szybko, prosto, skutecznie</p>
         </div>
@@ -79,7 +80,7 @@ const schema: Schema = {
   </Section>
 
   <!-- Technologia -->
-  <Section
+  <!-- <Section
     center
     class="bg-accent-darkest text-white"
     gap="gap-12 lg:gap-16 2xl:gap-20">
@@ -176,6 +177,68 @@ const schema: Schema = {
         </>
       ))
     }
+  </Section> -->
+
+  <!-- Technologia -->
+  <Section
+    center
+    class="bg-accent-darkest text-white"
+    gap="gap-12 lg:gap-16 2xl:gap-20">
+    <div class="flex max-w-prose flex-col gap-4 md:items-center">
+      <h2 class="md:text-center">
+        Technologia z głową. <br />
+        <span class="text-accent-light">Co jest dla mnie ważne?</span>
+      </h2>
+    </div>
+    <Row placement="items-start">
+      <div
+        class="flex flex-col items-center justify-start gap-8 rounded-md bg-accent-dark px-4 py-10 shadow-md">
+        <h3 class="text-h5">Osiąganie celu</h3>
+
+        <div class="flex flex-row flex-wrap gap-2">
+          {
+            [
+              "łatwiejsze pozyskiwanie i obsługa klientów",
+              "lepsza organizacja pracy",
+              "szybsze działanie",
+              "mniej błędów i opóźnień",
+              "mniejsze koszty",
+              "więcej operatywnego czasu",
+              "nowe możliwości",
+            ].map((feature) => (
+              <div class="bg-accent-darkest p-2 text-accent-lightest">
+                {feature}
+              </div>
+            ))
+          }
+        </div>
+      </div>
+      <div
+        class="flex flex-col items-center justify-start gap-8 rounded-md bg-accent-dark px-4 py-10 shadow-md">
+        <h3 class="text-h5">Odpowiednia technologia</h3>
+        <div class="flex flex-row flex-wrap gap-2">
+          {
+            [
+              "bezpieczna",
+              "skuteczna",
+              "szybka",
+              "prosta",
+              "na czasie",
+              "rentowna",
+              "dopasowana",
+              "wygodna",
+              "wystarczająca",
+              "bezawaryjna",
+              "elastyczna",
+            ].map((feature) => (
+              <div class="bg-accent-darkest p-2 text-accent-lightest">
+                {feature}
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </Row>
   </Section>
 
   <!-- Usługi -->
