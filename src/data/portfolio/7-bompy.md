@@ -54,11 +54,11 @@ Trzeba było jednak znaleźć bibliotekę, która umożliwia tworzenie interfejs
 
 ### Kilka zdjęć z interfejsu programu
 
-![Widok drzewa w aplikacji bompy do zarządzania zestawieniami materiałowymi](/src/assets/images/portfolio/bompy/bompy-1.webp)
+![Widok drzewa w aplikacji bompy do zarządzania zestawieniami materiałowymi](../../assets/images/portfolio/bompy/bompy-1.webp)
 
-![Widok menu w aplikacji bompy do zarządzania zestawieniami materiałowymi](/src/assets/images/portfolio/bompy/bompy-2.webp)
+![Widok menu w aplikacji bompy do zarządzania zestawieniami materiałowymi](../../assets/images/portfolio/bompy/bompy-2.webp)
 
-![Ekran informacyjny aplikacji bompy do zarządzania zestawieniami materiałowymi](/src/assets/images/portfolio/bompy/bompy-3.webp)
+![Ekran informacyjny aplikacji bompy do zarządzania zestawieniami materiałowymi](../../assets/images/portfolio/bompy/bompy-3.webp)
 
 ## Wyniki
 

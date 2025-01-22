@@ -67,11 +67,11 @@ Ostateczne rozwiązanie jest trochę skomplikowane i działa w sposób półauto
 
 ## Kilka zdjęć z efektów działania programu
 
-![Przykład automatycznie utworzonej grafiki promocyjnej dla sklepu spożywczego](/src/assets/images/portfolio/graphics-promotion-system/graphics-promotion-1.webp)
+![Przykład automatycznie utworzonej grafiki promocyjnej dla sklepu spożywczego](../../assets/images/portfolio/graphics-promotion-system/graphics-promotion-1.webp)
 
-![Przykład szablonowej i automatycznie utworzonej grafiki promocyjnej](/src/assets/images/portfolio/graphics-promotion-system/graphics-promotion-2.webp)
+![Przykład szablonowej i automatycznie utworzonej grafiki promocyjnej](../../assets/images/portfolio/graphics-promotion-system/graphics-promotion-2.webp)
 
-![Siatka szablonowych grafik marketingowych produktów spożywczych](/src/assets/images/portfolio/graphics-promotion-system/graphics-promo-showcase.webp)
+![Siatka szablonowych grafik marketingowych produktów spożywczych](../../assets/images/portfolio/graphics-promotion-system/graphics-promo-showcase.webp)
 
 ## Możliwe ulepszenia
 

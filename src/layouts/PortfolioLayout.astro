@@ -1,9 +1,6 @@
 ---
 import type { MarkdownHeading } from "astro"
 import type { CollectionEntry } from "astro:content"
-import { Icon } from "astro-icon/components"
-
-import data from "~/data/site.json"
 
 import { type Meta, type Schema } from "@components/core/MySEO.astro"
 
@@ -12,7 +9,6 @@ import Layout from "@layouts/Layout.astro"
 import Section from "@components/core/Section.astro"
 import MyImage from "@components/ui/MyImage.astro"
 
-import Categories from "@components/blog/Categories.astro"
 import Button from "~/components/ui/Button.astro"
 import CTA from "~/components/widgets/CTA.astro"
 
@@ -46,21 +42,20 @@ const { post, meta, schema } = Astro.props
   </header>
 
   <Section maxWidth="max-w-prose">
+    <!-- image -->
+    {
+      post.data.image.src && (
+        <MyImage
+          src={post.data.image.src}
+          alt={post.data.image.alt}
+          aspect="aspect-video"
+          class="object-top"
+          loading="eager"
+        />
+      )
+    }
     <article
       class="prose prose-lg text-black prose-p:text-lg prose-img:aspect-square prose-img:w-[680px] prose-img:rounded-lg prose-img:object-cover prose-img:shadow-md">
-      <!-- image -->
-      {
-        post.data.image.src && (
-          <MyImage
-            src={post.data.image.src}
-            alt={post.data.image.alt}
-            aspect="aspect-video"
-            class="object-top"
-            loading="eager"
-          />
-        )
-      }
-
       <!-- Metrics -->
       {
         post.data.webMetrics && (

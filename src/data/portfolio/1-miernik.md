@@ -87,16 +87,16 @@ Zmieniłem podstawę budulcową. To nadal wordpress, ale teraz zamiast kadence j
 Zmienił się także projekt graficzny. Jest teraz bardziej spójny i nowoczesny, ale ciągle czytelny. Kolor tym razem jest bardziej pomarańczowy.
 
 **Przed:**
-![Strona internetowa www.miernik-rozwarcia.xce.pl stworzona przez Łukasza Miłoś](/src/assets/images/portfolio/miernik-rozwarcia/miernik-rozwarcia-prezentacja.webp)
+![Strona internetowa www.miernik-rozwarcia.xce.pl stworzona przez Łukasza Miłoś](../../assets/images/portfolio/miernik-rozwarcia/miernik-rozwarcia-prezentacja.webp)
 
 **Po:**
-![Odświeżona strona internetowa www.miernik-rozwarcia.xce.pl](/src/assets/images/portfolio/miernik-rozwarcia/miernik-rozwarcia-lifting.webp)
+![Odświeżona strona internetowa www.miernik-rozwarcia.xce.pl](../../assets/images/portfolio/miernik-rozwarcia/miernik-rozwarcia-lifting.webp)
 
 ## Wyniki
 
 ### Dane
 
-![Dane liczby odwiedzin i kliknięć dla strony www.miernik-rozwarcia.xce.pl](/src/assets/images/portfolio/miernik-rozwarcia/miernik-rozwarcia-dane.webp)
+![Dane liczby odwiedzin i kliknięć dla strony www.miernik-rozwarcia.xce.pl](../../assets/images/portfolio/miernik-rozwarcia/miernik-rozwarcia-dane.webp)
 
 Strona od początku okresu została wyświetlona w Google prawie 2500 razy, a kliknięta blisko 150 razy.
 
@@ -108,6 +108,6 @@ Strona pozwoliła zwiększyć sprzedaż o 100%.
 
 ### Metryki
 
-![Metryki dla strony www.miernik-rozwarcia.xce.pl](/src/assets/images/portfolio/miernik-rozwarcia/miernik-rozwarcia-metryki.webp)
+![Metryki dla strony www.miernik-rozwarcia.xce.pl](../../assets/images/portfolio/miernik-rozwarcia/miernik-rozwarcia-metryki.webp)
 
 Jak widać metryki są niemal doskonałe. Wydajność jest jeszcze możliwa do poprawy po dokładniejszej optymalizacji. Pozostałe wskaźniki są bez zarzutu.

@@ -47,11 +47,11 @@ Postawiłem na QTcreator (bibliotekę QT), z programowaniem w języku C++
 
 ### Kilka zdjęć z interfejsu programu
 
-![Zrzut ekranu z aplikacji stworzonej przez Łukasza Miłoś, służącej organizacji pola małego wyświetlacza segmentowego](/src/assets/images/portfolio/vis4xe/vis4xe-1.webp)
+![Zrzut ekranu z aplikacji stworzonej przez Łukasza Miłoś, służącej organizacji pola małego wyświetlacza segmentowego](../../assets/images/portfolio/vis4xe/vis4xe-1.webp)
 
-![Zarządzanie projektami wyświetlaczy w aplikacji vis4xe](/src/assets/images/portfolio/vis4xe/vis4xe-2.webp)
+![Zarządzanie projektami wyświetlaczy w aplikacji vis4xe](../../assets/images/portfolio/vis4xe/vis4xe-2.webp)
 
-![Tworzenie nowego projektu w aplikacji vis4xe](/src/assets/images/portfolio/vis4xe/vis4xe-3.webp)
+![Tworzenie nowego projektu w aplikacji vis4xe](../../assets/images/portfolio/vis4xe/vis4xe-3.webp)
 
 ## Wyniki
 

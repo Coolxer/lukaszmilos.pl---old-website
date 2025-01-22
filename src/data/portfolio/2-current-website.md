@@ -77,7 +77,7 @@ Ostatecznie treść może nie jest idealna pod względem SEO, ale postawiłem tu
 
 Stronę zaprojektowałem samodzielnie z użyciem narzędzia figma i komponentów relume. Strona na tym etapie przeszła kilka iteracji poprawek. Po wdrożeniu także były jeszcze pewne zmiany.
 
-![Projekt strony www.lukaszmilos.pl w figmie](/src/assets/images/portfolio/obecna-strona/obecna-strona-projekt.webp)
+![Projekt strony www.lukaszmilos.pl w figmie](../../assets/images/portfolio/obecna-strona/obecna-strona-projekt.webp)
 
 Strona jest czysta, schludna i zawiera sporo wolnej przestrzeni.
 
@@ -93,7 +93,7 @@ Kolor niebieski jest także kolorem akcentującym, używanym głównie jako przy
 
 ### Kodowanie
 
-![Kodowanie strony internetowej w astro](/src/assets/images/portfolio/obecna-strona/obecna-strona-kod.webp)
+![Kodowanie strony internetowej w astro](../../assets/images/portfolio/obecna-strona/obecna-strona-kod.webp)
 
 Przygotowałem swój własny szablon, komponenty i sekcję, które mogłem powielać i dostosowywać.
 
@@ -117,11 +117,11 @@ Za "kopie zapasowe" odpowiada github, gdzie jest przechowywany kod projektu. Opr
 
 Strona w czasie kilku miesięcy została odwiedzona ponad 1400 razy, a użytownicy weszli na nią około 30 razy. Te wyniki nie są najlepsze, ale to dopiero początek, bo w ostatnim czasie obserwuję wzrosty. Problemem jest też wykorzystywanie zbyt ogólnych słów kluczowych.
 
-![Liczba odwiedzin i kliknięć strony www.lukaszmilos.pl](/src/assets/images/portfolio/obecna-strona/obecna-strona-wykres.webp)
+![Liczba odwiedzin i kliknięć strony www.lukaszmilos.pl](../../assets/images/portfolio/obecna-strona/obecna-strona-wykres.webp)
 
 ### metryki
 
-![Metryki wydajnościowe dla strony internetowej](/src/assets/images/portfolio/obecna-strona/obecna-strona-metryki-2.webp)
+![Metryki wydajnościowe dla strony internetowej](../../assets/images/portfolio/obecna-strona/obecna-strona-metryki-2.webp)
 
 #### wydajność
 
