@@ -1,6 +1,4 @@
 ---
-import { buildSlug } from "@utils/utils"
-
 import PageLayout from "@layouts/PageLayout.astro"
 import { type Meta, type Schema } from "@components/core/MySEO.astro"
 
@@ -100,12 +98,7 @@ const schema: Schema = {}
           ]}
         />
         <div class="flex flex-col gap-4 self-stretch lg:flex-row">
-          <Button link={buildSlug("/kontakt")}
-            >Opowiedz o swoim projekcie</Button
-          >
-          <Button link={buildSlug("/kontakt")} variant="secondary"
-            >Skontaktuj się</Button
-          >
+          <Button link="/kontakt">Opowiedz o swoim projekcie</Button>
         </div>
       </div>
     </Row>
@@ -204,10 +197,7 @@ const schema: Schema = {}
       </div>
       <div
         class="mt-8 flex flex-col gap-4 self-stretch lg:flex-row lg:self-start">
-        <Button link={buildSlug("/kontakt")}>Opowiedz o swoim projekcie</Button>
-        <Button link={buildSlug("/kontakt")} variant="tetriary"
-          >Skontaktuj się</Button
-        >
+        <Button link="/kontakt">Opowiedz o swoim projekcie</Button>
       </div>
     </div>
   </Section>
@@ -306,12 +296,7 @@ const schema: Schema = {}
           </div>
         </div>
         <div class="flex flex-col gap-4 self-stretch lg:flex-row">
-          <Button link={buildSlug("/kontakt")}
-            >Opowiedz o swoim projekcie</Button
-          >
-          <Button link={buildSlug("/kontakt")} variant="secondary"
-            >Skontaktuj się</Button
-          >
+          <Button link="/kontakt">Opowiedz o swoim projekcie</Button>
         </div>
       </div><div>
         <MyImage
@@ -420,10 +405,7 @@ const schema: Schema = {}
     </p>
 
     <div class="flex w-full flex-col justify-center gap-4 md:flex-row">
-      <Button link={buildSlug("/kontakt")}>Opowiedz o swoim projekcie</Button>
-      <Button variant="secondary" link={buildSlug("/kontakt")}
-        >Skontaktuj się
-      </Button>
+      <Button link="/kontakt">Opowiedz o swoim projekcie</Button>
     </div>
   </CTA>
 </PageLayout>

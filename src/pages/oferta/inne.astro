@@ -1,6 +1,4 @@
 ---
-import { buildSlug } from "@utils/utils"
-
 import PageLayout from "@layouts/PageLayout.astro"
 import { type Meta, type Schema } from "@components/core/MySEO.astro"
 
@@ -38,8 +36,6 @@ const schema: Schema = {}
   <CTA>
     <p class="text-center text-h2">Zainteresowany(a) współpracą?</p>
 
-    <Button variant="tetriary" link={buildSlug("kontakt")}
-      >Skontaktuj się
-    </Button>
+    <Button variant="tetriary" link="kontakt">Skontaktuj się </Button>
   </CTA>
 </PageLayout>

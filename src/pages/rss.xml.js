@@ -17,7 +17,7 @@ export async function GET(context) {
   //     title: item.data.title,
   //     description: item.data.description,
   //     pubDate: item.data.date,
-  //     link: `/${item.collection}/${item.slug}/`,
+  //     link: `/${item.collection}/${item.id}/`,
   //   })),
   // })
 
@@ -29,7 +29,7 @@ export async function GET(context) {
     trailingSlash: true,
     items: blog.map((post) => ({
       title: post.data.title,
-      link: `/blog/${post.slug}/`,
+      link: `/blog/${post.id}/`,
       pubDate: post.data.date,
       description: post.data.description,
       categories: post.data.categories,

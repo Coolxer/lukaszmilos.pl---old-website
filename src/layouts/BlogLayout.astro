@@ -14,8 +14,6 @@ import PagePagination from "@components/blog/PagePagination.astro"
 import MyBreadCrumbs from "@components/widgets/MyBreadCrumbs.astro"
 
 import Categories from "@components/blog/Categories.astro"
-import { buildSlug } from "@utils/utils"
-
 import Button from "@components/ui/Button.astro"
 
 export interface Props {
@@ -63,7 +61,7 @@ const {
             ))}
           </Row>
           <div class="mt-4 flex items-center justify-center">
-            <Button link={buildSlug("/blog/baza-wiedzy")}>Zobacz więcej</Button>
+            <Button link="/blog/baza-wiedzy">Zobacz więcej</Button>
           </div>
         </Section>
       )
@@ -100,7 +98,7 @@ const {
               <p class="text-h5">
                 Poznaj kluczowe kwestie technologii w firmie
               </p>
-              <Button link={buildSlug("/blog/baza-wiedzy")} variant="tetriary">
+              <Button link="/blog/baza-wiedzy" variant="tetriary">
                 Zobacz bazę wiedzy
               </Button>
             </div>
@@ -114,7 +112,7 @@ const {
                 ))}
               </Row>
               <div class="mt-4 flex items-center justify-center">
-                <Button link={buildSlug("/blog/baza-wiedzy")}>
+                <Button link="/blog/baza-wiedzy">
                   Zobacz więcej
                 </Button>
               </div>
@@ -124,7 +122,7 @@ const {
       ) : (
         <div class="flex flex-col gap-4 self-center">
           <p class="text-h5">Niestety, ale nie ma jeszcze postów</p>
-          <Button link={buildSlug("/")}>Wróć do strony głównej</Button>
+          <Button link="/">Wróć do strony głównej</Button>
         </div>
       )
     }

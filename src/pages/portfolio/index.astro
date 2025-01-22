@@ -1,0 +1,145 @@
+---
+import { getCollection, type CollectionEntry } from "astro:content"
+import PageLayout from "@layouts/PageLayout.astro"
+import { type Meta, type Schema } from "@components/core/MySEO.astro"
+
+import { Icon } from "astro-icon/components"
+import Section from "@components/core/Section.astro"
+import Row from "@components/core/Row.astro"
+import MyImage from "@components/ui/MyImage.astro"
+import Button from "@components/ui/Button.astro"
+
+import CTA from "@components/widgets/CTA.astro"
+import IconList from "~/components/ui/IconList.astro"
+
+const posts: CollectionEntry<"portfolio">[] = await getCollection("portfolio")
+const sortedPosts = posts.sort((a, b) => a.data.order - b.data.order)
+
+const meta: Meta = {
+  title: "Portfolio - Zobacz moje realizacje",
+  description:
+    "Zobacz moje realizacje, czyli wybrane projekty z przeszłości, które pozwolą Ci podjąć lepszą decyzję o współpracy. Lista stale się powiększa.",
+  // openGraph: {},
+  // twitter: {},
+  og: false,
+  tw: false,
+}
+
+const schema: Schema = {
+  "@context": "http://schema.org",
+  "@type": "WebSite",
+  url: "https://lukaszmilos.pl/portfolio/",
+  name: "Portfolio - Łukasz Miłoś",
+  description:
+    "Przeglądaj portfolio Łukasza Miłoś, aby zobaczyć przykłady jego prac i projekty z zakresu cyfrowej transformacji.",
+}
+---
+
+<PageLayout
+  pageTitle="Portfolio"
+  pageDescription="Zobacz, co już w przeszłości wykonałem, jak wykonałem i dlaczego podjąłem takie decyzje."
+  meta={meta}
+  schema={schema}>
+  {
+    sortedPosts.map((post, index) => (
+      <Section class:list={[index % 2 !== 0 && "bg-gray-light"]}>
+        <Row>
+          <div class="flex flex-col gap-8">
+            <div class="flex flex-col gap-4">
+              <div class="inline-block self-start bg-accent-light px-4 py-2 text-accent-dark">
+                {post.data.category}
+              </div>
+              <h2>{post.data.title}</h2>
+            </div>
+            <div class="flex flex-col gap-4">
+              <div class="flex gap-2">
+                <Icon name="tabler:device-ipad-question" class="text-3xl" />
+                <div class="flex flex-col gap-1">
+                  <p class="text-xl font-bold">Problem</p>
+                  <p class="text-lg">{post.data.problem}</p>
+                </div>
+              </div>
+              <hr class="h-px w-1/2 border-0 bg-gray" />
+              <div class="flex gap-2">
+                <Icon name="tabler:target" class="text-3xl" />
+                <div class="flex flex-col gap-1">
+                  <p class="text-xl font-bold">Cel</p>
+                  <p class="text-lg">{post.data.target}</p>
+                </div>
+              </div>
+              <hr class="h-px w-1/2 border-0 bg-gray" />
+              <div class="flex gap-2">
+                <Icon name="tabler:chart-bar" class="text-3xl" />
+                <div class="flex flex-col gap-1">
+                  <p class="text-xl font-bold">Wynik</p>
+                  <p class="text-lg">{post.data.result}</p>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col gap-4 self-stretch md:flex-row md:self-start">
+              <Button link={"/portfolio/" + post.id}>
+                Zobacz opis projektu (case study)
+              </Button>
+            </div>
+          </div>
+          <div>
+            <MyImage
+              src={post.data.image.src}
+              alt={post.data.image.alt}
+              loading={index === 0 ? "eager" : "lazy"}
+              class="object-top"
+            />
+          </div>
+        </Row>
+      </Section>
+    ))
+  }
+
+  <Section>
+    <Row placement="items-start"
+      ><div class="flex flex-col items-start justify-center">
+        <h2>Inne zauważone problemy, które oczekują rozwiązania</h2>
+      </div>
+
+      <IconList
+        items={[
+          "Mało czytelne menu restauracji i pizzerii",
+          "Problem z rejestracją telefoniczną do przychodni i brak przejrzystych i dostepnych stron www (ludzkie i weterynaryjne)",
+          "Trudna / niedostępna aktualizacja portfolio innych usługodawców",
+        ]}
+      />
+    </Row>
+  </Section>
+
+  <Section center noTopPadding>
+    <div
+      class="flex w-full flex-row items-center justify-between rounded bg-accent-dark px-8 py-16 text-white shadow">
+      <p class="text-h5">Zobacz więcej moich prac</p>
+      <Button
+        link="https://github.com/Coolxer?tab=repositories"
+        rawLink
+        variant="tetriary"
+        rel="nofollow"
+        target="_blank">
+        Przejdź na github
+      </Button>
+    </div>
+  </Section>
+
+  <!-- CTA -->
+  <CTA>
+    <p class="text-center text-h2">Chcesz podjąć współpracę?</p>
+    <p class="text-center text-lg">
+      “Może można zarzucić mi brak doświadczenia, ale nie brak wiedzy,
+      umiejętności i zaangażowania”.
+    </p>
+    <p class="text-center text-gray-light">
+      Jestem otwarty na realizację konkretnych projektów, ale również na stałą
+      współpracę.
+    </p>
+    <div class="flex w-full flex-col justify-center gap-4 md:flex-row">
+      <Button link="/oferta">Zobacz ofertę</Button>
+      <Button variant="tetriary" link="/kontakt">Skontaktuj się</Button>
+    </div>
+  </CTA>
+</PageLayout>

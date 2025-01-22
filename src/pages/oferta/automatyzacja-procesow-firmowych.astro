@@ -1,6 +1,4 @@
 ---
-import { buildSlug } from "@utils/utils"
-
 import { Icon } from "astro-icon/components"
 
 import PageLayout from "@layouts/PageLayout.astro"
@@ -126,17 +124,14 @@ const meta: Meta = {
           <div class="flex flex-col gap-4 rounded bg-accent-dark p-8 shadow-sm">
             <p class="text-h2 text-accent">{index + 1}</p>
             <h3 class="text-h5">{item.title}</h3>
-            <p class="text-gray">{item.description}</p>
+            <p class="text-accent-lightest">{item.description}</p>
           </div>
         ))
       }
     </Row>
     <div
       class="flex flex-col gap-4 self-stretch md:flex-row md:self-start lg:self-center">
-      <Button link={buildSlug("/kontakt")}>Opowiedz o swoim projekcie</Button>
-      <Button link={buildSlug("/kontakt")} variant="tetriary"
-        >Skontaktuj się</Button
-      >
+      <Button link="/kontakt">Opowiedz o swoim projekcie</Button>
     </div>
   </Section>
 
@@ -168,12 +163,7 @@ const meta: Meta = {
           małych firm, by nie zostały one w technologicznym tyle.
         </p>
         <div class="flex flex-col gap-4 self-stretch lg:flex-row lg:self-start">
-          <Button link={buildSlug("/kontakt")}
-            >Opowiedz o swoim projekcie</Button
-          >
-          <Button link={buildSlug("/kontakt")} variant="tetriary"
-            >Skontaktuj się</Button
-          >
+          <Button link="/kontakt">Opowiedz o swoim projekcie</Button>
         </div>
       </div>
     </Row>
@@ -202,9 +192,7 @@ const meta: Meta = {
               monotonne. Algorytmy radzą sobie z tym znacznie lepiej.
             </p>
           </div>
-          <Button
-            link={buildSlug("/kontakt")}
-            class="self-stretch md:self-start"
+          <Button link="/kontakt" class="self-stretch md:self-start"
             >Opowiedz o swoim projekcie</Button
           >
         </div>
@@ -393,10 +381,7 @@ const meta: Meta = {
     <p class="text-center text-h2">Chcesz automatyzować procesy w firmie?</p>
 
     <div class="flex w-full flex-col justify-center gap-4 md:flex-row">
-      <Button link={buildSlug("/kontakt")}>Opowiedz o swoim projekcie</Button>
-      <Button variant="secondary" link={buildSlug("/kontakt")}
-        >Skontaktuj się
-      </Button>
+      <Button link="/kontakt">Opowiedz o swoim projekcie</Button>
     </div>
   </CTA>
 </PageLayout>

@@ -1,6 +1,5 @@
 ---
 import Section from "@components/core/Section.astro"
-import { buildSlug } from "@utils/utils"
 import Button from "@components/ui/Button.astro"
 
 export type FaqItem = {
@@ -71,7 +70,7 @@ const { id, items } = Astro.props
     <p class="text-gray">
       Napisz, co chcesz wiedzieć.<br />To darmowy i niezobowiązujący kontakt.
     </p>
-    <Button link={buildSlug("/kontakt")} class="self-stretch md:self-center"
+    <Button link="/kontakt" class="self-stretch md:self-center"
       >Zadaj pytanie</Button
     >
   </div>

@@ -1,6 +1,4 @@
 ---
-import { buildSlug } from "@utils/utils"
-
 import Layout from "@layouts/Layout.astro"
 import { type Meta, type Schema } from "@components/core/MySEO.astro"
 
@@ -37,7 +35,7 @@ const schema: Schema = {
     ><Row
       ><div class="flex flex-col justify-center gap-8">
         <div class="flex flex-col gap-4">
-          <h1>
+          <h1 class="font-bold">
             Pomagam firmom MŚP <span class="text-accent">lepiej</span> korzystać
             z technologii
           </h1>
@@ -63,10 +61,8 @@ const schema: Schema = {
           </div>
         </div>
         <div class="flex flex-row gap-4">
-          <Button link={buildSlug("/oferta")}>Zobacz ofertę</Button>
-          <Button variant="secondary" link={buildSlug("/kontakt")}
-            >Skontaktuj się</Button
-          >
+          <Button link="/oferta">Zobacz ofertę</Button>
+          <Button variant="secondary" link="/kontakt">Skontaktuj się</Button>
         </div>
       </div><div>
         <MyImage
@@ -179,23 +175,78 @@ const schema: Schema = {
     }
   </Section> -->
 
-  <!-- Technologia -->
-  <Section
-    center
-    class="bg-accent-darkest text-white"
-    gap="gap-12 lg:gap-16 2xl:gap-20">
+  <!-- Usługi -->
+  <Section center class="bg-accent-darkest text-white">
     <div class="flex max-w-prose flex-col gap-4 md:items-center">
       <h2 class="md:text-center">
-        Technologia z głową. <br />
-        <span class="text-accent-light">Co jest dla mnie ważne?</span>
+        W czym mogę pomóc? <br />
+        <span class="text-accent-light">
+          Rozwiązuje problemy i upraszczam zadania
+        </span>
       </h2>
     </div>
-    <Row placement="items-start">
-      <div
-        class="flex flex-col items-center justify-start gap-8 rounded-md bg-accent-dark px-4 py-10 shadow-md">
-        <h3 class="text-h5">Osiąganie celu</h3>
+    <Row maxColumns={3} class="my-4" placement="items-stretch">
+      {
+        [
+          {
+            icon: "tabler:app-window",
+            title: "Buduję i poprawiam strony internetowe",
+            description:
+              "Budowanie strony jest dzisiaj łatwe, ale zbudowanie dobrej i skutecznej strony jest szalenie trudne, a tak istotne. Staram się to zmieniać.",
+            extend:
+              "Wiele stron jest bardzo źle zbudowanych - zawierają masę błędów i trudno je obsługiwać. Pora na zmianę!",
+          },
+          {
+            icon: "tabler:database",
+            title: "Szukam lepszych rozwiązań cyfrowych",
+            description:
+              "Poszukiwanie możliwości i wskazanie, co można wykorzystać i w jaki sposób lub jak coś poprawić, by przynosiło to większe korzyści.",
+            extend:
+              "Potrzeba czasu, wiedzy i technicznego doświadczenia, by wiedzieć, co jest możliwe i jak to zrobić.",
+          },
+          {
+            icon: "tabler:automation",
+            title: "Wdrażam programy i automatyzacje",
+            description:
+              "Transformacja cyfrowa i stały rozwój jest nieunikniony nawet dla mikrofirm. Potrzeby tutaj są ogromne, a ja wychodzę naprzeciw.",
+            extend:
+              "Dzięki narzędziom i automatyzacjom możesz m.in. oszczędzić czas i minimalizować błędy.",
+          },
+        ].map((item) => (
+          <div class="flex flex-col gap-4 rounded bg-accent-dark px-8 py-10 shadow-sm">
+            <div class="flex items-center gap-4">
+              <Icon name={item.icon} class="text-7xl" />
+              <h3 class="text-h5">{item.title}</h3>
+            </div>
+            <p class="text-lg text-accent-lightest">{item.description}</p>
+            <p class="text-accent-light">{item.extend}</p>
+          </div>
+        ))
+      }
+    </Row>
+    <div
+      class="flex flex-col gap-4 self-stretch md:flex-row md:self-start lg:self-center">
+      <Button link="/oferta">Zobacz ofertę</Button>
+      <Button link="/kontakt" variant="tetriary">Skontaktuj się</Button>
+    </div>
+  </Section>
 
-        <div class="flex flex-row flex-wrap gap-2">
+  <Section center class="" gap="gap-12 lg:gap-16 2xl:gap-20">
+    <div class="flex max-w-prose flex-col gap-4 md:items-center">
+      <h2 class="md:text-center">
+        Pomocna technologia. <br />
+        <span class="text-accent-light">Jakie mam podejście?</span>
+      </h2>
+    </div>
+    <Row placement="items-stretch">
+      <div
+        class="flex flex-col items-center justify-start gap-6 rounded-md bg-gray-light px-6 py-10 shadow-md">
+        <h3 class="text-h4 text-gray-dark">Osiąganie celu</h3>
+        <p class="text-lg">
+          Skupiam się na celu, który ma być osiągnięty. Technologia ma pomóc w
+          realizacji celu, a nie być celem samym w sobie.
+        </p>
+        <div class="flex flex-row flex-wrap gap-3">
           {
             [
               "łatwiejsze pozyskiwanie i obsługa klientów",
@@ -206,7 +257,7 @@ const schema: Schema = {
               "więcej operatywnego czasu",
               "nowe możliwości",
             ].map((feature) => (
-              <div class="bg-accent-darkest p-2 text-accent-lightest">
+              <div class="bg-gray-lightest px-2 py-2 text-gray-dark">
                 {feature}
               </div>
             ))
@@ -214,9 +265,13 @@ const schema: Schema = {
         </div>
       </div>
       <div
-        class="flex flex-col items-center justify-start gap-8 rounded-md bg-accent-dark px-4 py-10 shadow-md">
-        <h3 class="text-h5">Odpowiednia technologia</h3>
-        <div class="flex flex-row flex-wrap gap-2">
+        class="flex flex-col items-center justify-start gap-6 rounded-md bg-gray-light px-6 py-10 shadow-md">
+        <h3 class="text-h4 text-gray-dark">Odpowiednia technologia</h3>
+        <p class="text-lg">
+          Technologia do zadania musi być odpowiednio dobrana i wdrożona. Często
+          decyduje ona o powodzeniu lub porażce.
+        </p>
+        <div class="flex flex-row flex-wrap gap-3">
           {
             [
               "bezpieczna",
@@ -231,7 +286,7 @@ const schema: Schema = {
               "bezawaryjna",
               "elastyczna",
             ].map((feature) => (
-              <div class="bg-accent-darkest p-2 text-accent-lightest">
+              <div class="bg-gray-lightest px-4 py-2 text-gray-dark">
                 {feature}
               </div>
             ))
@@ -240,76 +295,21 @@ const schema: Schema = {
       </div>
     </Row>
   </Section>
-
-  <!-- Usługi -->
-  <Section center>
-    <h2 class="max-wprose md:text-center">
-      Wiesz już czym się kieruję.<br />
-      <span class="text-accent">Dowiedz się co robię.</span>
-    </h2>
-    <Row>
-      <div class="order-2 md:order-1">
-        <MyImage
-          src="pages/pisanie-na-klawiaturze.webp"
-          alt="Osoba pracująca przy komputerze i technologii cyfrowej."
-          withOverlay
-        />
-      </div>
-      <div class="order-1 grid grid-cols-1 gap-8 md:order-2 lg:grid-cols-2">
-        {
-          [
-            {
-              icon: "tabler:browser",
-              title: "Buduję, oceniam, poprawiam i ulepszam strony internetowe",
-              description:
-                "Strona internetowa to centrum działań firmy w sieci. Korzystaj w pełni z jej atutów i spraw by była skuteczniejsza.",
-            },
-            {
-              icon: "tabler:automation",
-              title: "Wdrażam przydatne narzędzia cyfrowe i automatyzacje",
-              description:
-                "Transformacja cyfrowa i stały rozwój jest nieunikniony nawet dla mikrofirm. Korzystaj z przydatnych narzędzi i aplikacji.",
-            },
-            {
-              icon: "tabler:device-desktop-search",
-              title: "Szukam lepszych rozwiązań cyfrowych dla firm",
-              description:
-                "Poszukiwanie możliwości i wskazanie, co można wykorzystać i w jaki sposób lub jak coś poprawić, by przynosiło to większe korzyści.",
-            },
-            {
-              icon: "tabler:bookmark",
-              title: "Dzielę się wiedzą, pomysłami i swoimi projektami",
-              description:
-                "W ramach publikacji dzielę się wiedzą. Są to informacje na temat technologii, narzędzi i procesów. Pokazuję też własne projekty.",
-            },
-          ].map((item) => (
-            <div class="flex flex-1 flex-col gap-4">
-              <Icon name={item.icon} class="text-5xl text-accent" />
-              <h3 class="text-h5">{item.title}</h3>
-              <p class="text-gray-dark">{item.description}</p>
-            </div>
-          ))
-        }
-      </div>
-    </Row>
-    <div class="flex flex-col gap-4 self-stretch md:flex-row md:self-center">
-      <Button link={buildSlug("/oferta")}>Zobacz ofertę</Button>
-      <Button variant="secondary" link={buildSlug("/kontakt")}
-        >Skontaktuj się</Button
-      >
-    </div>
-  </Section>
-
-  <!-- O mnie -->
   <Section class="bg-gray-light"
     ><Row
       ><div class="flex flex-col items-start justify-center gap-8">
         <div class="flex flex-col gap-4">
-          <h2>Kim jestem?</h2>
+          <h2>Zapytasz - kim jestem?</h2>
           <p class="text-lg">
             Nazywam się Łukasz Miłoś i lubię rozwiązywać problemy z pomocą
             technologii. Charakteryzuję się dużym zaangażowaniem oraz szerokim
-            spektrum zainteresowań i narzędzi, które ciągle poszerzam.
+            spektrum zainteresowań i narzędzi, które ciągle poszerzam. Lubię
+            nowe wyzwania.
+          </p>
+          <p class="text-lg">
+            Wiem też, co to ciężka, fizyczna i brudna praca (pył, kurz, brudne i
+            poprzecinane palce), nie tylko z prac gospodarczych, ale też z
+            pomocy tacie w warsztacie ślusarskim.
           </p>
         </div>
         <div class="flex flex-col gap-4 lg:flex-row">
@@ -326,9 +326,10 @@ const schema: Schema = {
             </p>
           </div>
         </div>
-        <Button link={buildSlug("/o-mnie")} class="self-stretch md:self-start"
-          >Poznaj mnie lepiej</Button
-        >
+        <div class="flex flex-col gap-4 self-stretch md:flex-row md:self-start">
+          <Button link="/o-mnie">Poznaj mnie lepiej</Button>
+          <Button variant="secondary" link="/kontakt">Skontaktuj się</Button>
+        </div>
       </div><div>
         <MyImage
           src="pages/hero2.webp"
@@ -338,20 +339,32 @@ const schema: Schema = {
       </div>
     </Row></Section
   >
+  <Section>
+    <Row placement="items-start"
+      ><div class="flex flex-col items-start justify-center">
+        <h2>Zobacz kilka moich przykładowych prac i rozwiązań</h2>
+      </div>
+
+      <div class="flex flex-col items-start justify-center gap-8">
+        <p class="text-lg">
+          Co do tej pory udało mi się zrobić? Jakie problemy rozwiązałem? Jak to
+          wykonałem i dlaczego tak, a nie inaczej? Czy projekt zakończył się
+          sukcesem?
+        </p>
+        <div class="flex flex-col gap-4 self-stretch md:flex-row md:self-start">
+          <Button link="/portfolio">Zobacz portfolio</Button>
+          <Button variant="secondary" link="/kontakt">Skontaktuj się</Button>
+        </div>
+      </div>
+    </Row>
+  </Section>
 
   <!-- CTA -->
   <CTA>
-    <p class="text-center text-h2">
-      Rozwiąż swój problem, zaspokój potrzebę, osiągnij cel! <br /><span
-        class="text-accent-light">
-        Zrób pierwszy krok!
-      </span>
-    </p>
+    <p class="text-center text-h2">Rozwiąż swój problem i osiągnij cel!</p>
     <div class="flex w-full flex-col gap-4 md:flex-row md:justify-center">
-      <Button link={buildSlug("/oferta")}>Zobacz ofertę</Button>
-      <Button variant="tetriary" link={buildSlug("/kontakt")}
-        >Skontaktuj się</Button
-      >
+      <Button link='/oferta"'>Zobacz ofertę</Button>
+      <Button variant="tetriary" link="/kontakt">Skontaktuj się</Button>
     </div>
   </CTA>
 </Layout>

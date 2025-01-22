@@ -1,6 +1,4 @@
 ---
-import { buildSlug } from "@utils/utils"
-
 import PageLayout from "@layouts/PageLayout.astro"
 import { type Meta, type Schema } from "@components/core/MySEO.astro"
 
@@ -143,10 +141,8 @@ const schema: Schema = {
         </p>
 
         <div class="flex flex-col items-stretch gap-4 lg:flex-row">
-          <Button
-            link={buildSlug("/oferta/inne")}
-            target="_blank"
-            class="text-center">Zobacz szerszą listę pól do współpracy</Button
+          <Button link="/oferta/inne" target="_blank" class="text-center"
+            >Zobacz szerszą listę pól do współpracy</Button
           >
           <Button
             variant="secondary"
@@ -289,7 +285,7 @@ const schema: Schema = {
   <Section class="bg-gray-light"
     ><Row
       ><div class="flex flex-col justify-center gap-8">
-        <h2>Moje największe osiągnięcia</h2><div class="flex flex-col gap-6">
+        <h2>Największe osiągnięcia</h2><div class="flex flex-col gap-6">
           <div class="flex flex-col gap-2">
             <h3 class="text-h5">Uzyskanie tytułu inżyniera IT</h3><p>
               Uzyskanie tytułu inżyniera z wyróżnieniem, ze specjalizacją
@@ -349,14 +345,12 @@ const schema: Schema = {
       umiejętności i zaangażowania”
     </p>
     <p class="text-center text-gray-light">
-      Jestem otwarty na propozycję realizacji projektów, ale i również na stałą
+      Jestem otwarty na realizację konkretnych projektów, ale również na stałą
       współpracę.
     </p>
     <div class="flex w-full flex-col justify-center gap-4 md:flex-row">
-      <Button link={buildSlug("/oferta")}>Zobacz ofertę</Button>
-      <Button variant="tetriary" link={buildSlug("/kontakt")}
-        >Skontaktuj się</Button
-      >
+      <Button link="/oferta">Zobacz ofertę</Button>
+      <Button variant="tetriary" link="/kontakt">Skontaktuj się</Button>
     </div>
   </CTA>
 </PageLayout>

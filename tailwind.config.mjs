@@ -81,7 +81,7 @@ export default {
         ],
         h1: [
           "clamp(2.4883rem, 2.1597rem + 1.6433vi, 3.4332rem)",
-          { lineHeight: "1", letterSpacing: "-0.03em", fontWeight: "700" },
+          { lineHeight: "1", letterSpacing: "-0.03em", fontWeight: "500" },
         ],
         h2: [
           "clamp(2.0736rem, 1.8395rem + 1.1704vi, 2.7466rem)",

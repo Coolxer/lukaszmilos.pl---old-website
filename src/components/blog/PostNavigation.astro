@@ -18,15 +18,15 @@ const { prevPost, nextPost, class: className } = Astro.props
 {
   (prevPost || nextPost) && (
     <div class:list={["flex flex-row justify-center gap-4", className]}>
-      {prevPost?.slug && (
-        <Button link={"/blog/" + slugify(prevPost.slug) + "/"}>
+      {prevPost?.id && (
+        <Button link={"/blog/" + slugify(prevPost.id) + "/"}>
           <Icon name="chevron-left" class="size-6" />
           Poprzedni post
         </Button>
       )}
 
-      {nextPost?.slug && (
-        <Button link={"/blog/" + slugify(nextPost.slug) + "/"}>
+      {nextPost?.id && (
+        <Button link={"/blog/" + slugify(nextPost.id) + "/"}>
           Następny post
           <Icon name="chevron-right" class="size-6" />
         </Button>

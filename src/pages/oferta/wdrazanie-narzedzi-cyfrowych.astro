@@ -1,6 +1,4 @@
 ---
-import { buildSlug } from "@utils/utils"
-
 import PageLayout from "@layouts/PageLayout.astro"
 import { type Meta, type Schema } from "@components/core/MySEO.astro"
 
@@ -134,17 +132,14 @@ const schema: Schema = {}
           <div class="flex flex-col gap-4 rounded bg-accent-dark p-8 shadow-sm">
             <p class="text-h2 text-accent">{index + 1}</p>
             <h3 class="text-h5">{item.title}</h3>
-            <p class="text-gray">{item.description}</p>
+            <p class="text-accent-lightest">{item.description}</p>
           </div>
         ))
       }
     </Row>
     <div
       class="flex flex-col gap-4 self-stretch md:flex-row md:self-start lg:self-center">
-      <Button link={buildSlug("/kontakt")}>Opowiedz o swoim projekcie</Button>
-      <Button link={buildSlug("/kontakt")} variant="tetriary"
-        >Skontaktuj się</Button
-      >
+      <Button link="/kontakt">Opowiedz o swoim projekcie</Button>
     </div>
   </Section>
 
@@ -172,12 +167,7 @@ const schema: Schema = {}
 
           <div
             class="flex flex-col gap-4 self-stretch lg:flex-row lg:self-start">
-            <Button link={buildSlug("/kontakt")}
-              >Opowiedz o swoim projekcie</Button
-            >
-            <Button link={buildSlug("/kontakt")} variant="tetriary"
-              >Skontaktuj się</Button
-            >
+            <Button link="/kontakt">Opowiedz o swoim projekcie</Button>
           </div>
         </p>
       </div>
@@ -287,10 +277,7 @@ const schema: Schema = {}
     </p>
 
     <div class="flex w-full flex-col justify-center gap-4 md:flex-row">
-      <Button link={buildSlug("/kontakt")}>Opowiedz o swoim projekcie</Button>
-      <Button variant="secondary" link={buildSlug("/kontakt")}
-        >Skontaktuj się
-      </Button>
+      <Button link="/kontakt">Opowiedz o swoim projekcie</Button>
     </div>
   </CTA>
 </PageLayout>

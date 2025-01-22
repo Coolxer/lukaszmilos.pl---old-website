@@ -13,7 +13,7 @@ export interface Props {
 
 const { post, class: className } = Astro.props
 
-const link = buildSlug(`/blog/${post.slug}/`)
+const link = buildSlug(`/blog/${post.id}/`)
 ---
 
 <div

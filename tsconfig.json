@@ -26,5 +26,6 @@
       "@pages/*": ["src/pages/*"]
     }
   },
+  "include": [".astro/types.d.ts", "**/*"],
   "exclude": ["node_modules", "dist", "public"]
 }

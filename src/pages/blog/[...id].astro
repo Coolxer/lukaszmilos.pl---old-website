@@ -1,0 +1,116 @@
+---
+import { type CollectionEntry, getCollection, render } from "astro:content"
+import data from "~/data/site.json"
+
+import PostLayout from "@layouts/PostLayout.astro"
+
+import { type Meta, type Schema } from "@components/core/MySEO.astro"
+
+export async function getStaticPaths() {
+  const posts: CollectionEntry<"blog">[] = (await getCollection("blog"))
+    .filter((post) => !post.data.draft)
+    .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  return posts.map((post) => ({
+    params: { id: post.id },
+    props: post,
+  }))
+}
+
+type Props = CollectionEntry<"blog">
+
+const posts = (await getCollection("blog")).filter((post) => !post.data.draft)
+
+function getNextPost(): CollectionEntry<"blog"> | null {
+  let postIndex
+  for (const post of posts) {
+    if (post.id === Astro.params.id) {
+      postIndex = posts.indexOf(post)
+      return posts[postIndex + 1] || null
+    }
+  }
+
+  return null
+}
+
+function getPrevPost(): CollectionEntry<"blog"> | null {
+  let postIndex
+  for (const post of posts) {
+    if (post.id === Astro.params.id) {
+      postIndex = posts.indexOf(post)
+      return posts[postIndex - 1] || null
+    }
+  }
+
+  return null
+}
+
+function getRelatedPosts(currentPost: CollectionEntry<"blog">) {
+  const relatedPosts: CollectionEntry<"blog">[] = []
+  const categories = currentPost.data.categories
+
+  currentPost?.data?.relatedPosts?.forEach((related) => {
+    const post = posts.find((p) => p.id === related.id)
+    if (post && !relatedPosts.includes(post)) {
+      relatedPosts.push(post)
+    }
+  })
+
+  const otherPosts = posts.filter(
+    (post) =>
+      post.id !== currentPost.id &&
+      !relatedPosts.includes(post) &&
+      post.data.categories.some((category) => categories.includes(category))
+  )
+
+  while (relatedPosts.length < 3 && otherPosts.length > 0) {
+    const randomIndex = Math.floor(Math.random() * otherPosts.length)
+    const selectedPost = otherPosts.splice(randomIndex, 1)[0]
+
+    if (selectedPost) relatedPosts.push(selectedPost)
+  }
+
+  return relatedPosts.slice(0, 3)
+}
+
+const nextPost: CollectionEntry<"blog"> | null = getNextPost()
+const prevPost: CollectionEntry<"blog"> | null = getPrevPost()
+
+const post = Astro.props
+const { Content, headings } = await render(post)
+
+const relatedPosts = getRelatedPosts(post)
+
+const meta: Meta = {
+  ...post.data.meta,
+  article: true,
+}
+
+const schema: Schema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: post.data.meta.title,
+  description: post.data.meta.description,
+  datePublished: post.data.date,
+  dateModified: post.data.date,
+  image: [post.data.image],
+  author: [
+    {
+      "@type": "Person",
+      name: data.company.name,
+      url: data.site.domain,
+      type: "Organization",
+    },
+  ],
+}
+---
+
+<PostLayout
+  post={post}
+  headings={headings}
+  meta={meta}
+  schema={schema}
+  relatedPosts={relatedPosts}
+  prevPost={prevPost}
+  nextPost={nextPost}>
+  <Content />
+</PostLayout>

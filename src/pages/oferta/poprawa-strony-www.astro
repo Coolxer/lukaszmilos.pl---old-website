@@ -1,6 +1,4 @@
 ---
-import { buildSlug } from "@utils/utils"
-
 import PageLayout from "@layouts/PageLayout.astro"
 import { type Meta, type Schema } from "@components/core/MySEO.astro"
 
@@ -158,10 +156,7 @@ const schema: Schema = {}
       </div>
     </Row>
     <div class="flex w-full flex-col justify-center gap-4 md:flex-row">
-      <Button link={buildSlug("/kontakt")}>Opowiedz o swoim projekcie</Button>
-      <Button link={buildSlug("/kontakt")} variant="secondary"
-        >Zadaj pytanie</Button
-      >
+      <Button link="/kontakt">Opowiedz o swoim projekcie</Button>
     </div>
   </Section>
 
@@ -327,10 +322,7 @@ const schema: Schema = {}
       </div>
     </div>
     <div class="flex w-full flex-col gap-4 md:flex-row">
-      <Button link={buildSlug("/kontakt")}>Opowiedz o swoim projekcie</Button>
-      <Button link={buildSlug("/kontakt")} variant="tetriary"
-        >Zadaj pytanie</Button
-      >
+      <Button link="/kontakt">Opowiedz o swoim projekcie</Button>
     </div>
   </Section>
 
@@ -452,10 +444,7 @@ const schema: Schema = {}
     </Row>
 
     <div class="flex w-full flex-col justify-center gap-4 md:flex-row">
-      <Button link={buildSlug("/kontakt")}>Opowiedz o swoim projekcie</Button>
-      <Button link={buildSlug("/kontakt")} variant="secondary"
-        >Zadaj pytanie</Button
-      >
+      <Button link="/kontakt">Opowiedz o swoim projekcie</Button>
     </div>
   </Section>
 
@@ -544,10 +533,7 @@ const schema: Schema = {}
       }
     </div>
     <div class="flex w-full flex-col justify-center gap-4 md:flex-row">
-      <Button link={buildSlug("/kontakt")}>Opowiedz o swoim projekcie</Button>
-      <Button link={buildSlug("/kontakt")} variant="secondary"
-        >Zadaj pytanie</Button
-      >
+      <Button link="/kontakt">Opowiedz o swoim projekcie</Button>
     </div>
   </Section>
 
@@ -619,10 +605,7 @@ const schema: Schema = {}
     <p class="text-center text-h2">Chcesz poprawić swoją stronę www?</p>
 
     <div class="flex w-full flex-col justify-center gap-4 md:flex-row">
-      <Button link={buildSlug("/kontakt")}>Opowiedz o swoim projekcie</Button>
-      <Button link={buildSlug("/kontakt")} variant="secondary"
-        >Zadaj pytanie</Button
-      >
+      <Button link="/kontakt">Opowiedz o swoim projekcie</Button>
     </div>
   </CTA>
 </PageLayout>
