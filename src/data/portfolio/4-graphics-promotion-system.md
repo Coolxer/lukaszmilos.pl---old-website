@@ -1,12 +1,12 @@
 ---
 slug: system-tworzenia-grafik-promocyjnych
-order: 4
+order: 5
 meta:
   title: System tworzenia grafik promocyjnych
   description: System generowania grafik promocyjnych z użyciem Python, Jinja2 i automatyzacji, ułatwia tworzenie materiałów marketingowych
 title: System tworzenia grafik promocyjnych, który ułatwia codzienne zadania
 problem: Trudność tworzenia estetycznych i spójnych grafik marketingowych
-target: Umożliwienie nawet małym sklepom możliowości tworzenia i publikowania materiałów promocyjnych
+target: Umożliwienie nawet małym sklepom tworzenia i publikowania materiałów promocyjnych
 result: Projekt zrealizowany pomyślnie, ale dotychczas brak klientów
 image:
   alt: Przykład automatycznie utworzonej grafiki promocyjnej dla sklepu spożywczego

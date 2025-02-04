@@ -54,7 +54,7 @@ Każda strona jest nieco inna i czasami wymagane lub polecane są dodatkowe funk
 
 ### Dodatkowe prace.
 
-Nie sposób nie uwzględnić dodatkowych prac, które nie zawsze są podejmowane. Mowa np. o analizie i optymalizacji SEO i wydajności, dodatkowych zabezpieczeniach, integracji narzędzi (np. Google Search Console i Google Analytics), konfiguracja hostingu, kopii zapasowych, kont pocztowych, itp. To są rzeczy, o których często nie pamiętamy lub być może nawet nie wiemy, a w wyższej cenie często są one zawarte.
+Nie sposób nie uwzględnić dodatkowych prac, które nie zawsze są podejmowane. Mowa np. o analizie i optymalizacji SEO i wydajności, dodatkowych zabezpieczeniach, integracji narzędzi (np. Google Search Console i Simple Analytics), konfiguracja hostingu, kopii zapasowych, kont pocztowych, itp. To są rzeczy, o których często nie pamiętamy lub być może nawet nie wiemy, a w wyższej cenie często są one zawarte.
 
 ### Opieka i rozwój.
 

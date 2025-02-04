@@ -42,14 +42,7 @@ const schema: Schema = {}
             W sieci sprzedawać można na wiele sposobów i na różnych kanałach. Z
             pewnością słyszałeś(aś) nie tylko o możliwości sprzedaży na rynkach
             sprzedażowych (np. allegro, ebay, olx), ale marzysz także o własnym
-            sklepie internetowym? Dobrze trafiłeś(aś)!
-          </p>
-
-          <p>
-            <b>
-              Z moją pomocą zyskasz stabilny, szybki i ładny sklep www gotowy do
-              sprzedaży.
-            </b> Zanim jednak przystąpimy do działania, dowiedz się więcej.
+            sklepie internetowym? Chętnie pomogę.
           </p>
 
           <div class="flex flex-col gap-4 self-stretch lg:flex-row">
@@ -316,7 +309,7 @@ const schema: Schema = {}
     </Row>
   </Section>
 
-  <Section center class="bg-gray-lightest"
+  <!-- <Section center class="bg-gray-lightest"
     ><div class="flex max-w-prose flex-col gap-4 md:text-center">
       <h2>Najlepsza technologia dla Twojego sklepu www</h2><p class="text-lg">
         Bazując na mojej wiedzy i doświadczeniu, staram się nie ograniczać, co
@@ -340,17 +333,35 @@ const schema: Schema = {}
         </p>
       </div></Row
     ></Section
-  >
+  > -->
 
-  <Section class="bg-gray-light">
+  <Section class="">
     <Row>
       <div class="flex flex-col items-start justify-center gap-8">
         <div class="flex flex-col gap-4">
           <h2>Ile kosztuje sklep internetowy?</h2>
+
+          <div>
+            <p class="text-h4">od 8000zł netto</p><p>
+              z ew. opieką techniczną 200zł / msc.
+            </p>
+          </div>
+          <div>
+            <p class="text-h4">lub 750zł / msc.</p><p>
+              min. 12 msc. - prace i opieka
+            </p>
+          </div>
+
           <p class="text-lg">
             Nie podaję konkretnych cen, bo to zależy od wielu czynników. Staram
-            się robić naprawdę dobrą robotę i do tematu podchodzić odpowiednio i
-            kompleksowo, poznając Twoje realne problemy i potrzeby.
+            się do tematu podchodzić odpowiednio i kompleksowo, poznając Twoje
+            realne problemy i potrzeby.
+          </p>
+
+          <p class="text-gray-dark">
+            Ceny też nie jest zbyt wysokie i dokładne, bo mimo wiedzy
+            technicznej i doświadczenia w wielu tematach, nie miałem jeszcze
+            okazji budować sklepu internetowego. Razem jednak damy radę!
           </p>
         </div>
         <div>
@@ -366,9 +377,7 @@ const schema: Schema = {}
                 "rodzaju i ilości stworzonej treści",
                 "dodatkowych materiałów",
               ].map((item) => (
-                <div class="bg-gray-lightest px-4 py-2 text-gray-dark">
-                  {item}
-                </div>
+                <div class="bg-gray-light px-4 py-2 text-gray-dark">{item}</div>
               ))
             }
           </div>
@@ -385,7 +394,7 @@ const schema: Schema = {}
     </Row>
   </Section>
 
-  <Section class="bg-gray-lightest">
+  <Section class="bg-gray-light">
     <Row
       ><div class="order-2 md:order-1">
         <MyImage
@@ -436,23 +445,11 @@ const schema: Schema = {}
           "Tak, jest to dobra strategia, która pozwala na korzystanie z darmowego źródła klientów platform sprzedażowych i jednoczesne budowanie swojej marki poprzez własny sklep internetowy.",
         ],
       },
-      {
-        question:
-          "Jakie technologie wykorzystujesz do tworzenia sklepów internetowych?",
-        answer: [
-          "Wykorzystuję technologie takie jak Wordpress Woocommerce i Webflow, a także inne rozwiązania w zależności od potrzeb klienta, jak prestashop, magento, shoper, czy shopify.",
-        ],
-      },
-      {
-        question: "Ile kosztuje stworzenie sklepu internetowego?",
-        answer: [
-          "Cena zależy od wielu czynników, takich jak liczba kategorii i produktów, dodatkowych funkcjonalności, rodzaj treści oraz potrzeb i problemów klienta. Najlepiej skontaktować się w celu uzyskania bezpłatnej wyceny.",
-        ],
-      },
+
       {
         question: "Jak długo trwa proces tworzenia sklepu internetowego?",
         answer: [
-          "Czas realizacji zależy od złożoności projektu i czasu dostarczenia niezbędnych materiałów. Realizacja zazwyczaj trwa od 7 do 30 dni.",
+          "Czas realizacji zależy od złożoności projektu i czasu dostarczenia niezbędnych materiałów. Myślę, że to czas od 3 do 5 tygodni",
         ],
       },
       {
@@ -467,11 +464,7 @@ const schema: Schema = {}
 
   <!-- CTA -->
   <CTA secondary>
-    <p class="text-center text-h2">
-      Sklep internetowy to ważny krok. <span class="text-accent">
-        Zrób go dobrze.
-      </span>
-    </p>
+    <p class="text-center text-h2">Stwórzmy razem Twój sklep internetowy.</p>
 
     <div class="flex w-full flex-col justify-center gap-4 md:flex-row">
       <Button link="/kontakt">Opowiedz o swoim projekcie</Button>

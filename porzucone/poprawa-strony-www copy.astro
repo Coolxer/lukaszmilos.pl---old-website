@@ -1,0 +1,611 @@
+---
+import PageLayout from "@layouts/PageLayout.astro"
+import { type Meta, type Schema } from "@components/core/MySEO.astro"
+
+import Section from "@components/core/Section.astro"
+import Row from "@components/core/Row.astro"
+import MyImage from "@components/ui/MyImage.astro"
+import Button from "@components/ui/Button.astro"
+import { Icon } from "astro-icon/components"
+
+import CTA from "@components/widgets/CTA.astro"
+import FAQ from "~/components/parts/FAQ.astro"
+
+const meta: Meta = {
+  title: "Poprawa strony www - skuteczniejsza strona internetowa",
+  description:
+    "Zleć poprawę swojej strony lub sklepu w wybranym aspekcie lub w całości. Szybkość, bezpieczeństwo, skuteczność? Na czym Ci zależy?",
+  og: false,
+  tw: false,
+}
+
+const schema: Schema = {}
+---
+
+<PageLayout
+  pageTitle="Poprawa strony (sklepu) www"
+  pageDescription="Masz stronę internetową, która nie spełnia Twoich oczekiwań? Zależy Ci na tym, aby Twoja witryna była po prostu lepsza, a sklep internetowy lepiej sprzedawał?"
+  meta={meta}
+  schema={schema}
+  ><Section
+    ><Row
+      ><div class="flex flex-col items-start justify-center gap-8">
+        <div class="flex flex-col gap-4">
+          <h2>Żadna strona www nie jest doskonała - moja także</h2><p
+            class="text-lg">
+            Zawsze można coś poprawić na stronie internetowej i warto to robić.
+          </p><p class="text-lg">
+            Czasami impuls do poprawy wynika bezpośrednio z widocznego problemu
+            lub jest efektem analizy i dążenia do doskonałości.
+          </p><p class="text-lg font-bold">
+            Pamiętaj, że im lepsza jest strona / sklep internetowy, tym większe
+            korzyści przynosi dla Twojej firmy.
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <MyImage
+          src="pages/strona-nieidealna.webp"
+          alt="Abstrakcyjny obraz niesamowitej strony internetowej, która wyłania się poza ekran monitora."
+          loading="eager"
+        />
+      </div>
+    </Row>
+  </Section>
+
+  <Section class="bg-gray-light"
+    ><Row
+      ><MyImage
+        src="pages/lepsza-strona.webp"
+        alt="Wskaźniki pokazujące wzrost skuteczności strony internetowej"
+      /><div class="flex flex-col items-start justify-center gap-8">
+        <div class="flex flex-col gap-4">
+          <h2>Dlaczego warto mieć lepszą stronę i sklep www?</h2><p
+            class="text-lg">
+            Strona internetowa jest przedstawicielem, marketerem czy sprzedawcą
+            Twojej firmy. Często decyduje o tym, czy klient zdecyduje się na
+            współpracę lub zakup. Jest to szczególnie ważne dzisiaj, przy tak
+            dużej konkurencji.
+          </p><p class="text-lg">
+            <b>
+              Być może nawet więcej osób zobaczy Twoją stronę internetową niż
+              odwiedzi Twoje biuro lub siedzibę
+            </b>, o którą z pewnością zadbałeś(aś). Dlatego warto zadbać o
+            jakość strony www.
+          </p>
+          <p class="text-lg">
+            W przypadku sklepu internetowego sprawa jest prosta - lepszy sklep
+            internetowy to większa sprzedaż. Zadbaj o sklep internetowy, jak o
+            swojego najlepszego handlowca.
+          </p>
+        </div>
+      </div>
+    </Row>
+    <div class="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+      {
+        [
+          {
+            title: "większa widoczność",
+            description:
+              "Popraw to, co zmniejsza widoczność Twojej firmy w sieci.",
+          },
+          {
+            title: "większa atrakcyjność",
+            description:
+              "Poznaj miejsca i elementy, które warto poprawić, by Twoja oferta była jeszcze lepsza.",
+          },
+          {
+            title: "lepszy wizerunek",
+            description:
+              "Niech klient widzi, że firma jest profesjonalna i dba o swoich klientów. ",
+          },
+          {
+            title: "większa konwersja",
+            description:
+              "Lepszy odbiór Twojej strony zwiększa zaufanie potencjalnych klientów.",
+          },
+          {
+            title: "większa sprzedaż",
+            description:
+              "Naprawa blędów i wprowadzenie ulepszeń prowadzi do lepszej sprzedaży.",
+          },
+
+          {
+            title: "obniżenie kosztów",
+            description:
+              "Dbałość o łatwiejszy dostęp do informacji, mniej pytań i lepsze opinie o firmie to niższe koszty.",
+          },
+        ].map((item) => (
+          <div class="flex flex-col gap-2">
+            <p class="text-h5">{item.title}</p>
+            <p class="text-gray-dark">{item.description}</p>
+          </div>
+        ))
+      }
+    </div>
+  </Section>
+
+  <Section center>
+    <h2>Lepsza strona/sklep www 3 prostych krokach</h2>
+    <Row maxColumns={3} class="my-4" placement="items-stretch">
+      <div class="flex flex-col gap-4 rounded bg-accent-lightest p-8 shadow-sm">
+        <p class="text-h2 text-accent">1</p>
+        <h3 class="text-h5">Ocena strony www</h3>
+        <p>
+          Ocena strony internetowej (audyt) to jej przegląd w poszukiwaniu
+          niedoskonałości i krytycznych błędów, ale i wskazanie możliwości
+          ulepszeń.
+        </p>
+      </div>
+      <div class="flex flex-col gap-4 rounded bg-accent-lightest p-8 shadow-sm">
+        <p class="text-h2 text-accent">2</p>
+        <h3 class="text-h5">Poprawa strony www</h3>
+        <p>
+          Poprawa wszystkich, bądź najważniejszych elementów wskazanych podczas
+          oceny lub wykrytych samodzielnie, na podstawie Twoich oczekiwań.
+        </p>
+      </div>
+      <div class="flex flex-col gap-4 rounded bg-accent-lightest p-8 shadow-sm">
+        <p class="text-h2 text-accent">3</p>
+        <h3 class="text-h5">Rozwój strony www</h3>
+        <p>
+          Wprowadzanie nowych funkcjonalności, które pomagają zarówno Tobie i
+          jak potencjalnym klientom i częściej powodują konwersję.
+        </p>
+      </div>
+    </Row>
+    <div class="flex w-full flex-col justify-center gap-4 md:flex-row">
+      <Button link="/kontakt">Opowiedz o swoim projekcie</Button>
+    </div>
+  </Section>
+
+  <!-- KROK 1 - ocena strony www -->
+  <Section center class="bg-accent-darkest text-white" gap="gap-24">
+    <div class="flex max-w-prose flex-col gap-4 text-center">
+      <h3>
+        <span class="text-accent-light">Krok 1.</span>
+        <br /> Ocena strony www
+      </h3>
+      <p class="text-lg text-gray">
+        Dowiedz się czy i jakie błędy są najbardziej widoczne i oddziaływują na
+        skuteczność Twojej strony (sklepu) internetowej.
+      </p>
+    </div>
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div class="flex flex-col gap-4">
+        <h4>Co jest sprawdzane i oceniane</h4><p class="text-lg">
+          Skupiam się na naprawdę ważnych kwestiach, przez które potencjalnie
+          tracisz widoczność, wiarygodność, klientów i pieniądze.
+        </p>
+        <p class="text-gray">
+          Można się "czepiać" wielu różnych rzeczy, np. kolorów czy nierównych
+          odstępów. To wszystko wpływa na profesjonalizm i odbiór Twojej marki,
+          ale nie ma nic gorszego, gdy coś nie działa lub użytkownik nie wie, co
+          i jak ma zrobić.
+        </p>
+      </div><div
+        class="grid grid-cols-1 gap-8 lg:col-span-2 lg:grid-cols-2 xl:grid-cols-3">
+        {
+          [
+            {
+              icon: "tabler:eye-cancel",
+              text: "elementy wizualne",
+              description:
+                "czy strona nie ma rażących błędów wizualnych, które niszczą obraz firmy?",
+            },
+            {
+              icon: "tabler:shield-search",
+              text: "bezpieczeństwo",
+              description: "Czy strona jest bezpieczna i wzbudza zaufanie?",
+            },
+            {
+              icon: "tabler:brand-speedtest",
+              text: "szybkość",
+              description:
+                "Czy strona nie ładuje się zbyt wolno, zniechęcając potencjalnego klienta?",
+            },
+            {
+              icon: "tabler:layout",
+              text: "responsywność",
+              description:
+                "Czy strona wyświetla się dobrze zarówno na komórkach jak i komputerach?",
+            },
+            {
+              icon: "tabler:road-sign",
+              text: "intuicyjność",
+              description:
+                "Czy nawigacja i korzystanie ze strony jest intuicyjne? Czy są zachowane standardy?",
+            },
+            {
+              icon: "tabler:hammer",
+              text: "użyteczność",
+              description:
+                "Czy wszystko dostępne na stronie jest użyteczne i przydatne? Czy jest to wygodne?",
+            },
+            {
+              icon: "tabler:adjustments",
+              text: "funkcjonalność",
+              description:
+                "Czy wszystko działa tak, jak należy? Przyciski, linki, formularze?",
+            },
+            {
+              icon: "tabler:report-money",
+              text: "wartość",
+              description:
+                "Subiektywna ocena oczami potencjalnego klienta - czy są wszystkie niezbędne informacje? Czego mi brakuje?",
+            },
+            {
+              icon: "tabler:device-desktop-search",
+              text: "techniczne SEO",
+              description:
+                "Najważniejsze kwestie technicznego SEO wpływające na widoczność w sieci - indeksacja, canonical, tagi meta, nagłówki",
+            },
+          ].map((item, index) => (
+            <div class="flex flex-row items-center gap-2 text-accent-lightest">
+              <Icon name={item.icon} class="text-5xl" />
+              <span class="text-h5">{item.text}</span>
+              <button
+                data-popover-target={`function-description-${index}`}
+                data-popover-placement="bottom"
+                type="button">
+                <>
+                  <svg
+                    class="ms-2 h-4 w-4 text-accent hover:text-accent-dark"
+                    aria-hidden="true"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      fill-rule="evenodd"
+                      d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <span class="sr-only">Pokaż szczegóły</span>
+                </>
+              </button>
+              <div
+                data-popover
+                id={`function-description-${index}`}
+                role="tooltip"
+                class="text-whitee invisible absolute z-10 inline-block w-72 rounded bg-accent-dark text-sm opacity-0 shadow-sm transition-opacity duration-300">
+                <div class="space-y-2 p-4">
+                  <p>{item.description}</p>
+                </div>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+
+    <Row placement="items-start"
+      ><div class="flex flex-col items-start justify-center">
+        <h4>Wyraźnie wskazane błędy i możliwości poprawy oraz ulepszeń</h4>
+      </div>
+
+      <div class="flex flex-col items-start justify-center gap-8">
+        <p class="text-lg">
+          Błędy są wyraźne wypunktowane, a miejsca, w których można coś jeszcze
+          dodatkowo poprawić, także są wskazywane.
+        </p>
+      </div>
+    </Row>
+
+    <div
+      class="align-items-center grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div class="col-span-2 flex flex-col gap-8">
+        <h4>Przykłady najczęstszych błędów</h4>
+        <div class="flex flex-row flex-wrap items-start gap-4">
+          {
+            [
+              "brak ważnego certyfikatu SSL",
+              "problemy z indeksacją",
+              "niedziałające linki",
+              "wolne wczytywanie strony",
+              "nieintuicyjna nawigacja",
+              "błędy lub brak responsywności",
+              "problemy z kontrastem",
+              "niewłaściwe stosowanie nagłówków",
+              "brak tagu canonical",
+              "zbyt duży rozmiar obrazów",
+              "skomplikowany lub niedziałający formularz",
+              "brak podstawowej analityki",
+            ].map((item) => (
+              <div class="bg-accent-light px-4 py-2 text-black">{item}</div>
+            ))
+          }
+        </div>
+      </div><div class="">
+        <MyImage src="pages/stop.webp" alt="Znak stop - droga bez przejazdu." />
+      </div>
+    </div>
+    <div class="flex w-full flex-col gap-4 md:flex-row">
+      <Button link="/kontakt">Opowiedz o swoim projekcie</Button>
+    </div>
+  </Section>
+
+  <!-- KROK 2 - poprawa strony www -->
+  <Section center gap="gap-24">
+    <div class="flex max-w-prose flex-col gap-4 text-center">
+      <h3>
+        <span class="text-accent">Krok 2.</span>
+        <br /> Poprawa strony www
+      </h3>
+      <p class="text-lg text-gray-dark">
+        Zleć poprawę wybranego elementu, zagadnienia lub całej strony www.
+      </p>
+    </div>
+    <Row
+      ><div class="order-2 md:order-1">
+        <MyImage
+          src="pages/wskazanie.webp"
+          alt="Osoba pokazuje palcem konkretne miejsce na ekranie monitora lub tablicy."
+        />
+      </div><div
+        class="order-1 flex flex-col items-start justify-center gap-8 md:order-2">
+        <div class="flex flex-col gap-4">
+          <h4>Zdecyduj, co chcesz poprawić</h4><p class="text-lg">
+            Uwierz mi, że błędów na stronach i sklepach www jest naprawdę sporo.
+            Ograniczeniem, co do ich poprawy jest opłacalność, czas i pieniądze,
+            dlatego czasami trzeba wybierać, co warto poprawić.
+          </p>
+        </div><div class="flex flex-col gap-6">
+          <div class="flex flex-col gap-2">
+            <span class="text-h5">Wybrany element</span><p>
+              Wiesz dokładnie, co chcesz poprawić, np. daną sekcję, przycisk,
+              zdjęcie.
+            </p>
+          </div>
+          <div class="flex flex-col gap-2">
+            <span class="text-h5">Wybrany aspekt</span><p>
+              Zależy Ci na ogólnej poprawie jakiegoś parametru np. szybkości,
+              responsywności czy bezpieczeństwa.
+            </p>
+          </div>
+          <div class="flex flex-col gap-2">
+            <span class="text-h5">Całość</span><p>
+              Zależy Ci na poprawie niemal wszystkiego. Często oznacza to budowę
+              strony od nowa.
+            </p>
+          </div>
+        </div>
+      </div></Row
+    >
+
+    <div class="flex flex-col gap-4">
+      <h4 class="text-center">Co możesz dodatkowo zyskać?</h4>
+      <Row maxColumns={3} class="my-4" placement="items-stretch">
+        <div class="flex flex-col gap-4 rounded bg-white p-8 shadow-sm">
+          <p class="text-h2 text-accent">1</p>
+          <h5>Dodatkowe uwagi i naprawy</h5>
+          <p class="text-gray-dark">
+            Nawet przy wskazaniu pojedynczego elementu czy aspektu do poprawy,
+            przy okazji mogę zwrócić uwagę na coś jeszcze innego, co jest
+            naprawdę ważne.
+          </p>
+        </div>
+        <div class="flex flex-col gap-4 rounded bg-white p-8 shadow-sm">
+          <p class="text-h2 text-accent">2</p>
+          <h5>Aktualizacja oprogramowania</h5>
+          <p class="text-gray-dark">
+            Jeśli okaże się, że oprogramowanie Twojej strony nie jest w
+            najnowszej wersji i może to powodować problemy, np. z
+            bezpieczeństwem, to pomogę Ci zaktualizować system.
+          </p>
+        </div>
+        <div class="flex flex-col gap-4 rounded bg-white p-8 shadow-sm">
+          <p class="text-h2 text-accent">3</p>
+          <h5>Opieka techniczna nad stroną</h5>
+          <p class="text-gray-dark">
+            Bedąc świadom istoty dbania o stronę internetową, także pod względem
+            technicznym, możemy umówić się na stałą opiekę techniczną nad Twoją
+            stroną www.
+          </p>
+        </div>
+      </Row>
+    </div>
+
+    <div class="flex flex-col gap-4">
+      <h4 class="text-center">
+        Przeniesienie strony, migracja lub odnowienie?
+      </h4>
+      <Row class="mt-4"
+        ><div class="flex flex-col items-start">
+          <h5>
+            <span class="text-accent">Dlaczego?</span> Czyli problemy z przestarzałymi
+            lub zaniedbanymi stronami
+          </h5>
+        </div>
+
+        <p class="text-lg">
+          Poprawa przestarzałych stron jest trudna z kilku powodów, m.in.
+          przestarzałej technologii, błędów u podstaw, wygaśniętych rozwiązań
+          premium, ryzyka zepsucia podczas aktualizacji niestabilnych systemów
+          lub braku danych logowania, a także czasem z nietypowej technologii.
+        </p>
+      </Row>
+    </div>
+
+    <Row
+      ><div class="flex flex-col items-start">
+        <h5>
+          <span class="text-accent">Rozwiązanie?</span> Migracja strony lub odnowienie
+        </h5>
+      </div>
+
+      <p class="text-lg">
+        Czasami lepiej stronę internetową odwzorować w świeżej technologii -
+        takiej samej lub całkiem innej. Często proponuję znacznie lepsze
+        rozwiązanie do witryn firmowych niż wordpress i mogę zbudować dla Ciebie
+        taką stronę.
+      </p>
+    </Row>
+
+    <div class="flex w-full flex-col justify-center gap-4 md:flex-row">
+      <Button link="/kontakt">Opowiedz o swoim projekcie</Button>
+    </div>
+  </Section>
+
+  <!-- KROK 3 - rozwój strony www -->
+  <Section center gap="gap-24" class="bg-white">
+    <div class="flex max-w-prose flex-col gap-4 text-center">
+      <h3>
+        <span class="text-accent">Krok 3.</span>
+        <br /> Rozwój strony www
+      </h3>
+      <p class="text-lg text-gray-dark">
+        Dodaj nowe funkcje na swoją stronę www, by zwiększyć jej wartość,
+        atrakcyjność i skuteczność. Niektóre z tych funkcji sprawiają, że
+        klienci są bardziej zdecydowani, inne oszczędzają czas, ułatwiają pracę
+        i pozwalają "odrzucić niewłaściowych klientów".
+      </p>
+    </div>
+    <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+      {
+        [
+          {
+            title: "Dodatkowa sekcja np. FAQ",
+            description:
+              "Czasami klientowi brakuje pewnych informacji o usłudze lub produkcie, co przeszkadza mu w podjęciu decyzji. Nie każdy jest skłonny zadzwonić i zapytać.",
+            image: {
+              src: "pages/faq.webp",
+              alt: "Przykład sekcji FAQ.",
+            },
+          },
+          {
+            title: "Rozbudowany formularz oferty",
+            description:
+              "W niektórych przypadkach dobrze sprawdza się rozbudowany formularz oferty, który pozwala klientowi poznać specyfikę danej usługi, a Tobie ułatwia pracę.",
+            image: {
+              src: "pages/survey.webp",
+              alt: "Przykład rozbudowanego formularza oferty.",
+            },
+          },
+          {
+            title: "Specjalistyczny kalkulator",
+            description:
+              "Kalkulator dobrze sprawdza się w przypadku niestandardowych ofert i rozwiązań szytych na miarę. Klientowi daje informacje, a Tobie oszczędza czas.",
+            image: {
+              src: "pages/calculator.webp",
+              alt: "Przykład dedykowanego kalkulatora dla danej niszy.",
+            },
+          },
+          {
+            title: "Kalendarz rezerwacji",
+            description:
+              "Kalendarz rezerwacji na stronie www sprawdza się w przypadku konsultacji czy usług umawianych na godziny, takie jak np. strzyżenie czy przegląd stanu uzębienia.",
+            image: {
+              src: "pages/calendar.webp",
+              alt: "Przykład kalendarza rezerwacji wizyt.",
+            },
+          },
+          {
+            title: "Czat(bot)",
+            description:
+              "Czat na stronie to dodatkowy element, który może zwiększyć zaangażowanie użytkowników.",
+            image: {
+              src: "pages/chat.webp",
+              alt: "Przykład chatu do umieszczenia na stronie www.",
+            },
+          },
+          {
+            title: "Masz inny pomysł?",
+            description:
+              "Masz inną plan, potrzebę lub pomysł, ale nie wiesz jak go zrealizować? Śmiało napisz, a postram się pomóc.",
+            image: {
+              src: "placeholder.webp",
+              alt: "",
+            },
+          },
+        ].map((item) => (
+          <div class="flex flex-col gap-8 rounded bg-gray-lightest p-8 shadow">
+            <div class="w-full">
+              <MyImage src={item.image.src} alt={item.image.alt} />
+            </div>
+            <div class="flex flex-col gap-4">
+              <h4 class="text-h5">{item.title}</h4>
+              <p>{item.description}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+    <div class="flex w-full flex-col justify-center gap-4 md:flex-row">
+      <Button link="/kontakt">Opowiedz o swoim projekcie</Button>
+    </div>
+  </Section>
+
+  <FAQ
+    id="faq-reviewing-site"
+    items={[
+      {
+        question: "Na czym polega ocena strony internetowej?",
+        answer: [
+          "Ocena strony internetowej, znana również jako audyt, to przegląd witryny w celu znalezienia niedoskonałości. Celem jest poprawa skuteczności i funkcjonalności strony.",
+        ],
+      },
+      {
+        question: "Jakie błędy są najczęściej wykrywane podczas audytu strony?",
+        answer: [
+          "Najczęściej wykrywane błędy to brak certyfikatu SSL, problemy z indeksacją, niedziałające linki, wolne wczytywanie strony, brak responsywności, problemy z kontrastem oraz niepoprawne stosowanie nagłówków.",
+        ],
+      },
+      {
+        question: "Co jest sprawdzane podczas audytu strony internetowej?",
+        answer: [
+          "Podczas audytu sprawdzane są elementy wizualne, bezpieczeństwo, szybkość, responsywność, intuicyjność, użyteczność, funkcjonalność oraz techniczne aspekty SEO.",
+        ],
+      },
+      {
+        question: "Dlaczego warto poprawiać stronę internetową?",
+        answer: [
+          "Poprawa strony internetowej może zwiększyć jej skuteczność, przyciągnąć więcej klientów oraz poprawić wizerunek firmy. Lepsza strona internetowa przynosi większe korzyści biznesowe.",
+        ],
+      },
+      {
+        question: "Co można poprawić na stronie internetowej?",
+        answer: [
+          "Można poprawić wiele elementów strony, w tym szybkość, responsywność, bezpieczeństwo, wygląd, funkcjonalność oraz treść. Poprawa zależy od indywidualnych potrzeb i priorytetów.",
+        ],
+      },
+      {
+        question:
+          "Jakie są najczęstsze problemy z przestarzałymi stronami internetowymi?",
+        answer: [
+          "Przestarzałe strony mogą mieć problemy związane z przestarzałą technologią, błędami u podstaw, wygaśniętymi rozwiązaniami premium, ryzykiem zepsucia podczas aktualizacji oraz brakiem danych logowania.",
+        ],
+      },
+      {
+        question: "Jakie są opcje migracji lub odnowienia strony internetowej?",
+        answer: [
+          "Migracja strony polega na przeniesieniu jej na nową platformę lub technologię. Odnowienie strony to zbudowanie jej od podstaw, często z wykorzystaniem nowoczesnych i bardziej efektywnych rozwiązań.",
+        ],
+      },
+      {
+        question: "Dlaczego warto ciągle rozwijać stronę internetową?",
+        answer: [
+          "Rozwój strony internetowej zwiększa jej wartość i skuteczność. Wprowadzanie nowych funkcjonalności może pomóc w przyciąganiu i konwersji klientów, a także w usprawnieniu procesów biznesowych.",
+        ],
+      },
+
+      {
+        question:
+          "Jakie funkcjonalności można dodać, aby poprawić wartość strony?",
+        answer: [
+          "Można dodać sekcję FAQ, rozbudowany formularz oferty, specjalistyczny kalkulator, kalendarz rezerwacji, czat lub inne dedykowane funkcjonalności, które zwiększą wartość strony dla użytkowników i wyszukiwarek.",
+        ],
+      },
+    ]}
+  />
+
+  <!-- CTA -->
+  <CTA secondary>
+    <p class="text-center text-h2">Chcesz poprawić swoją stronę www?</p>
+
+    <div class="flex w-full flex-col justify-center gap-4 md:flex-row">
+      <Button link="/kontakt">Opowiedz o swoim projekcie</Button>
+    </div>
+  </CTA>
+</PageLayout>

@@ -1,6 +1,6 @@
 ---
 slug: program-planowania-wyswietlacza-segmentowego
-order: 8
+order: 9
 meta:
   title: Program organizacji pola wyświetlacza segmentowego
   description: Program do organizacji pola wyświetlacza segmentowego dla Arduino, stworzony w Qt Creator i C++, usprawnia planowanie i sterowanie

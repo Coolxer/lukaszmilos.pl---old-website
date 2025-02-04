@@ -1,6 +1,7 @@
 ---
 import PageLayout from "@layouts/PageLayout.astro"
 import { type Meta, type Schema } from "@components/core/MySEO.astro"
+import { buildSlug } from "~/utils/utils"
 
 import Section from "@components/core/Section.astro"
 import Row from "@components/core/Row.astro"
@@ -65,45 +66,6 @@ const schema: Schema = {}
     </Row>
   </Section>
 
-  <Section class="bg-gray-light">
-    <Row>
-      <div class="order-2 md:order-1">
-        <MyImage
-          src="pages/wazne-pytania.webp"
-          alt="Osoba przegląda tablicę informacyjną, zadaje sobie pytania i zastanawia się na dalszymi krokami."
-        />
-      </div>
-      <div
-        class="order-1 flex flex-col items-start justify-center gap-8 md:order-2">
-        <div class="flex flex-col gap-4">
-          <h2>
-            Chcesz stronę www? <span class="text-accent">
-              Odpowiedz na te pytania.
-            </span>
-          </h2>
-          <p class="text-lg">
-            Potrzeby są różne. Każda sytuacja jest inna. Nie ma nic złego w
-            wyborach prostszych dróg lub rezygnacji z pewnych decyzji i funkcji,
-            jeśli teraz ich nie potrzebujesz lub masz inny plan.
-          </p>
-        </div>
-        <IconList
-          items={[
-            "Po co Ci strona www? Na czym Ci zależy?",
-            "Każda strona jest inna - jaka będzie Twoja?",
-            "Czy chcesz się wyróżniać? ",
-            "Czy strona ma zdobywać klientów? Czy po prostu być?",
-            "W jaki sposób ruch będzie sprowadzany na stronę?",
-            "Czy SEO ma dla Ciebie znaczenie?",
-          ]}
-        />
-        <div class="flex flex-col gap-4 self-stretch lg:flex-row">
-          <Button link="/kontakt">Opowiedz o swoim projekcie</Button>
-        </div>
-      </div>
-    </Row>
-  </Section>
-
   <!-- <Section class="bg-gray-light"
     ><Row
       ><div class="order-2 md:order-1">
@@ -135,9 +97,16 @@ const schema: Schema = {}
     </Row>
   </Section> -->
 
-  <Section>
+  <Section class="bg-gray-light">
     <Row>
-      <div class="flex flex-col items-start justify-center gap-8">
+      <div class="order-2 md:order-1">
+        <MyImage
+          src="pages/cel-strony-www.webp"
+          alt="Piłka zmierzająca do celu, czyli siatki kosza."
+        />
+      </div>
+      <div
+        class="order-1 flex flex-col items-start justify-center gap-8 md:order-2">
         <div class="flex flex-col gap-4">
           <h2>Cele strony www. Korzyści dla Ciebie</h2>
           <p class="text-lg">
@@ -159,155 +128,277 @@ const schema: Schema = {}
             "oszczędność czasu i pieniędzy",
           ]}
         />
-      </div><div>
-        <MyImage
-          src="pages/cel-strony-www.webp"
-          alt="Piłka zmierzająca do celu, czyli siatki kosza."
-        />
       </div>
     </Row>
   </Section>
 
-  <Section class="bg-accent-darkest text-white">
+  <!-- <Section center class=""
+    ><div class="flex max-w-prose flex-col gap-4 md:text-center">
+      <h2>Strony internetowe inne niż wszystkie</h2><p class="text-lg">
+        Tworzę strony internetowe inaczej niż wielu. Inna technologia i inne
+        podejście, skupienie na celu i rozwiązaniu Twojego problemu.
+      </p>
+    </div><Row placement="items-stretch"
+      ><div
+        class="flex flex-col gap-4 rounded bg-gray-light px-4 py-8 shadow-sm">
+        <h3 class="text-h5">Właściwa technologia</h3><p>
+          Odpowiedni dobór i stosowanie technologii jest kluczowe. W wielu
+          przypadkach porzucam wordpressa, bo są lepsze rozwiązania. Stawiam na
+          astro i statyczne strony kodowane.
+        </p>
+      </div><div
+        class="flex flex-col gap-4 rounded bg-gray-light px-4 py-8 shadow-sm">
+        <h3 class="text-h5">Odpowiednie podejście</h3><p>
+          Istotne jest także samo podejście do sprawy, oparte na wiedzy
+          technicznej i doświadczeniu, a także rozwiązywaniu problemów i
+          maksymalnej korzyści dla Ciebie.
+        </p>
+      </div></Row
+    ></Section
+  > -->
+
+  <Section class="">
+    <Row placement="items-start"
+      ><div class="flex flex-col items-start justify-center gap-4">
+        <h2>Strony internetowe inne niż wszystkie</h2>
+        <p class="text-lg">
+          Tworzę strony internetowe inaczej niż wielu. Inna technologia i inne
+          podejście, skupienie na celu i rozwiązaniu Twojego problemu.
+        </p>
+      </div>
+
+      <div class="flex flex-col items-start justify-center gap-8">
+        <div class="flex flex-col gap-4 rounded bg-white px-4 py-8 shadow-sm">
+          <h3 class="text-h5">Właściwa technologia</h3><p>
+            Odpowiedni dobór i stosowanie technologii jest kluczowe. W wielu
+            przypadkach porzucam wordpressa, bo są lepsze rozwiązania. Stawiam
+            na astro i statyczne strony kodowane.
+          </p>
+        </div><div
+          class="flex flex-col gap-4 rounded bg-white px-4 py-8 shadow-sm">
+          <h3 class="text-h5">Odpowiednie podejście</h3><p>
+            Istotne jest także samo podejście do sprawy, oparte na wiedzy
+            technicznej i doświadczeniu, a także rozwiązywaniu problemów i
+            maksymalnej korzyści dla Ciebie.
+          </p>
+        </div>
+      </div>
+    </Row>
+  </Section>
+
+  <Section center class="bg-accent-lightest"
+    ><div class="flex max-w-prose flex-col gap-4 md:text-center">
+      <h2>Jakie są zatem moje strony internetowe?</h2><p class="text-lg">
+        Czym się wyróżniają?
+      </p>
+    </div><Row placement="items-stretch" maxColumns={3}
+      >{
+        [
+          {
+            title: "Ultra szybkie",
+            description:
+              "Strony internetowe, które wychodzą spod mojej ręki są szalenie szybkie, często bliskie ideału. To aspekt, który zwiększa konwersję.",
+          },
+          {
+            title: "Super bezpieczne",
+            description:
+              "Strony w zasadzie nie do złamania. Zazwyczaj bez php i bazy danych. Kopia zapasowa zabezpieczona.d",
+          },
+          {
+            title: "Użyteczne i przejrzyste",
+            description:
+              "Skupiam się na celu i treści. To po nią przychodzi użytkownik. Przekaz musi być jasny i czytelny, a układ wspierać realizację celu, a nie przeszkadzać.",
+          },
+          {
+            title: "Minimalistyczne i spójne",
+            description:
+              "Wybieram stonowane czcionki, kolory i układy. Ograniczam zbędne efekty i animacje, które przeszkadzają w odbiorze. Użyteczny i spójny układ oznacza profesjonalizm, a wiele znanych marek stawia dzisiaj na maksymalną prostotę.",
+          },
+
+          {
+            title: "W pełni responsywne",
+            description:
+              "Strony tworzę w podejściu mobile-first, czyli skupiając się głównie na telefonach, bo to na nich jest dziś większość ruchu! Dopiero na drugim miejscu (równie ważnym), stawiam komputery",
+          },
+          {
+            title: "Łatwe w utrzymaniu",
+            description:
+              "Coś czego brakuje niemal wszystkim. Moje strony nie wymagają utrzymania i aktualizacji wtyczek i systemu. Aktualizujesz tylko, gdy chcesz coś zmienić lub dodać! Nic się nie psuje, ale warto doglądać i analizować, bo strona jest ważny elementem firmy.",
+          },
+          {
+            title: "Łatwe w obsłudze",
+            description:
+              "Łatwość dodania postu na bloga czy nowej realizacji do portfolio? Proszę bardzo - zrobię to za Ciebie lub przygotuję bajecznie prosty panel z formularzem - o wiele prostszy i bardziej funkcjonalny niż wp. Nie edytujesz wszystkiego, tylko to co potrzebujesz.",
+          },
+
+          {
+            title: "Doskonałe pod względem technicznego SEO",
+            description:
+              "SEO treści to odrębna sprawa (też w porządku), ale SEO techniczne? Doskonałe. Super szybkość, mobilność, dbałość o meta tagi, nagłówki, opisy alternatywne, opisy schema. To rzadko spotykane!",
+          },
+          {
+            title: "Doskonałe pod względem technicznym",
+            description:
+              "W technologiach i w programowaniu siedzę już od 10 lat. Wiele widziałem i testowałem. Wiem, co się dzieje w kodzie, dlaczego i jak to zmienić. Nie generuje magicznie rozwiązań. Ja je tworzę, a odpowiednia technologia mi w tym pomaga.",
+          },
+          {
+            title: "Podpięte pod prostą analitykę",
+            description:
+              "Jeśli chcesz to oprócz klasycznego Google Search Console, mogę zainstalować dla Ciebie prosty w obsłudze panel statystyk, który pomoże Ci lepiej działać ze stroną. Zrezygnowałem z Google Analytics na korzyść prostszego i w pełni bezpiecznego rozwiązania z RODO i GPDR.",
+          },
+          {
+            title: "Wdrażane na popularnym i bezpiecznym hostingu",
+            description:
+              "Dzięki temu, że strona jest statyczna możemy skorzystać z bardzo popularnego, szybkiego i bezpiecznego hostingu Cloudflare Pages, prawdopodobnie lepszego niż niejeden hosting za 300/500 zł / rok.",
+          },
+          {
+            title: "Z dodatkowymi elementami",
+            description:
+              "Potrzebujesz czegoś więcej? Zmiana motywu, wielojęzyczność, blog, portfolio, kalendarz rezerwacji, kalkulator, CRM lub automatyzacje dla swojej firmy? Z chęcią Ci pomogę.",
+          },
+          {
+            title: "Ze świetnym wsparciem",
+            description:
+              "Staram się maksymalnie wesprzeć Cie na każdym etapie, by zrzucić z Ciebie ciężar poświęconego czasu, wysiłku i decyzji. Pomagam we wdrażaniu i zmianach. Sugeruję ulepszenia i innowacje. Zależy mi na długotrwałej współpracy i Twoim zadowoleniu.",
+          },
+        ].map((item) => (
+          <div class="flex flex-col gap-4 rounded bg-accent-light/50 px-4 py-8 shadow-sm">
+            <h3 class="text-h5">{item.title}</h3>
+            <p>{item.description}</p>
+          </div>
+        ))
+      }</Row
+    ></Section
+  >
+
+  <Section center class="bg-accent-darkest text-white">
+    <div class="flex max-w-prose flex-col gap-4 md:text-center">
+      <h2>Brzmi Świetnie? To musi kosztować majątek! No nie koniecznie</h2><p
+        class="text-lg">
+        Będąc świadomym <strong>jakości oferty</strong>, ale jednocześnie chcąc,
+        <strong>
+          by więcej firm mogło jej doświadczyć, przygotowałem różne możliwości i
+          plany.
+        </strong>
+      </p>
+    </div>
+    <h2></h2>
+    <Row maxColumns={3} class="my-4" placement="items-stretch">
+      <div class="flex flex-col gap-4 rounded bg-accent-dark p-8 shadow-sm">
+        <h3 class="text-h5">
+          Landing Page - strona informacyjna lub sprzedażowa
+        </h3>
+        <div class="bg-accent-lightest p-2 text-h5 text-black">
+          od 1500zł / raz.
+        </div>
+        <p>
+          Płacisz raz i masz. Domena, hosting, kod, analityka - wszystkie konta
+          są Twoje (ja jestem dodany jako developer).
+        </p>
+
+        <p>
+          W razie potrzeby, masz moje wsparcie techniczne. Dodatkowe prace są
+          wyceniane indywidualnie.
+        </p>
+      </div>
+
+      <div class="flex flex-col gap-4 rounded bg-accent-dark p-8 shadow-sm">
+        <h3 class="text-h5">Klasyczna strona multi stronicowa - ryczałt</h3>
+        <div class="bg-accent-lightest p-2 text-h5 text-black">
+          od 3000zł / raz.
+        </div>
+        <p>
+          Płacisz raz i masz. Domena, hosting, kod, analityka - wszystkie konta
+          są Twoje (ja jestem dodany jako developer).
+        </p>
+
+        <p>
+          Strona może być wyposażona w prosty system CMS, dzięki czemu będziesz
+          samowystarczalny(a), by móc np. łatwo dodawać posty na blogu czy
+          realizacje.
+        </p>
+
+        <p>
+          Coś nie działa? Chcesz coś dodać / zmienić? Odezwij się, sprawdzę,
+          wycenię i zrealizuję.
+        </p>
+
+        <p>
+          Potrzebujesz ciągłego wparcia i pomocy? Płać abonament 97zł/msc. i
+          miej mnie pod ręką, do szybkiej pomocy.
+        </p>
+      </div>
+
+      <div class="flex flex-col gap-4 rounded bg-accent-dark p-8 shadow-sm">
+        <h3 class="text-h5">Klasyczna strona multi stronicowa - abonament</h3>
+        <div class="bg-accent-lightest p-2 text-h5 text-black">
+          od 300zł / msc.
+        </div>
+        <p>
+          Nowy model. Nie chcesz wydawać ponad 3000zł na raz? Płać abonament
+          300zł /msc z minimalnym okresem 1 roku. W ten sposób pracuję nad Twoją
+          stroną, najbardziej aktywnie na samym początku (wtedy powstaje cała
+          strona), ale potem również pomagam Ci w rozwoju.
+        </p>
+        <p>
+          W cenie masz moje wsparcie techniczne i drobne prace rozwojowe.
+          Potrzebujesz większej dostępności - zwiększamy wartość abonamentu.
+        </p>
+
+        <p>
+          Przestajesz płacić w pierwszym roku? Tracisz stronę. Przestajesz
+          płacić po roku? Strona jest Twoja, ale nie masz mojego wsparcia.
+        </p>
+      </div>
+    </Row>
+
+    <p>
+      * Ceny są poglądowe, bo każdy przypadek jest inny. Przykładowo, jeden
+      landing page ma długość 3 ekranów, a inny 10. Jednym razem samodzielnie
+      ktoś dostarczył wszystkie materiały (teksty, grafiki, projekt graficzny),
+      a innym razem musiałem wszystko robić samemu. Często jest to tylko strona
+      informacyjno-sprzedażowa, ale czasami są wymagane dodatkowe
+      funkcjonalności.
+    </p>
+
+    <div class="flex w-full flex-col gap-4">
+      <p class="text-h5">Elementy dodatkowo płatne:</p>
+      <IconList
+        class="text-gray-light"
+        items={[
+          "Dodatkowa podstrona -  400zł",
+          "Wielojęzyczność - 1000 zł",
+          "Motyw jasny-ciemny - 400zł",
+          "Specjalne elementy interaktywne, jak dodatkowy formularz, kalkulator, kalendarz, itp. - indywidualnie",
+        ]}
+      />
+    </div>
+
     <div
-      class="align-items-center grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-      <div class="flex flex-col gap-4">
-        <h2>Jaka będzie Twoja strona internetowa?</h2>
-        <p class="text-gray-light">O ile będziesz ze mną współpracować</p>
-      </div>
-      <div
-        class="col-span-2 flex flex-row flex-wrap items-start gap-4 text-black">
-        {
-          [
-            "estetyczna i profesjonalna",
-            "prosta, przejrzysta i czytelna",
-            "użyteczna i funkcjonalna",
-            "szybka i wydajna",
-            "responsywna",
-            "wartościowa dla użytkowników",
-            "bezpieczna",
-            "podstawowo zgodna z GDPR",
-            "zoptymalizowana technicznie pod SEO",
-            "łatwa w zarządzaniu i obsłudze",
-            "nastawiona na osiąganie celów",
-          ].map((item) => (
-            <div class="bg-accent-dark px-4 py-2 text-accent-light">{item}</div>
-          ))
-        }
-      </div>
-      <div
-        class="mt-8 flex flex-col gap-4 self-stretch lg:flex-row lg:self-start">
-        <Button link="/kontakt">Opowiedz o swoim projekcie</Button>
-      </div>
+      class="flex flex-col gap-4 self-stretch md:flex-row md:self-start lg:self-center">
+      <Button link="/kontakt">Opowiedz o swoim projekcie</Button>
     </div>
   </Section>
 
-  <Section center class="bg-gray-light"
-    ><div class="flex max-w-prose flex-col gap-4 md:text-center">
-      <h2>W jakiej technologii tworzę strony www?</h2><p class="text-lg">
-        Bazując na mojej wiedzy i doświadczeniu, staram się nie ograniczać, co
-        do technologii, ale mam swoje wybory, które dostosowuję do sytuacji i
-        wymagań.
-      </p>
-    </div><Row placement="items-stretch"
-      ><div class="flex flex-col gap-4 rounded bg-gray-lightest p-8 shadow-sm">
-        <h3 class="text-h5">Astro</h3><p>
-          Tzw. generator stron statycznych, w którym jednak strona jest
-          "ręcznie" kodowana przy pomocy najnowszych technik. Jest całkowicie
-          bezpieczna, nie wymaga utrzymania, nie ma ograniczeń i jest
-          niesamowicie szybka. Pełne skupienie na rozwojum a nie utrzymaniu!
-        </p>
-      </div><div
-        class="flex flex-col gap-4 rounded bg-gray-lightest p-8 shadow-sm">
-        <h3 class="text-h5">Wordpress</h3><p>
-          Do wielu projektów, zwłaszcza dynamicznych, stosuję też wordpressa
-          (gutenberg - spectra lub greenshift). Zaletą jest dostępność i łatwość
-          wdrażania, ale wadą bezpieczeństwo, awaryjność i koszty utrzymania. Do
-          większości stron polecam Astro.
-        </p>
-        <!-- </div> -->
+  <Section class="">
+    <Row placement="items-start"
+      ><div class="flex flex-col items-start justify-center">
+        <h2>O czym jeszcze warto wiedzieć?</h2>
       </div>
-    </Row>
-  </Section>
-  <Section>
-    <Row
-      ><div class="order-2 md:order-1">
-        <MyImage
-          src="pages/dodatkowe-prace-przy-tworzeniu.webp"
-          alt="Laptop z uruchomionym sklepem internetowym."
-        />
-      </div>
-      <div
-        class="order-1 flex flex-col items-start justify-center gap-8 md:order-2">
-        <div class="flex flex-col gap-4">
-          <h2>W czym jeszcze pomogę Ci w ramach tworzenia strony www</h2>
-          <p class="text-lg">
-            Niestety wielu twórców zrzuca masę pracy na klienta. Ja doceniam
-            wartość Twojego czasu i odciążam cię z wielu obowiązków za dodatkową
-            opłatą.
-          </p>
-        </div>
-        <IconList
-          items={[
-            "zakup domeny i hostingu",
-            "utworzenie kont pocztowych",
-            "wybór odpowiednich zdjęć i grafik",
-            "napisanie bądź przeredagowanie tekstu",
-            "podpięcie witryny pod analitykę",
-            "implementacja podstawowej polityki prywatności",
-            "implementacja Consent Mode V2",
-            "implementacja dodatkowych funkcjonalności",
-            "opieka techniczna i monitorowanie",
-          ]}
-        />
+
+      <div class="flex flex-col items-start justify-center gap-8">
+        <p class="text-lg">
+          Strona to nie tylko wygląd, tekst i zdjęcia. Trzeba jeszcze
+          skonfigurować domenę i hosting, formularz kontaktowy, politykę
+          prywatności, ew. ciasteczka i dodać witrynę do wyszukiwarki. We
+          wszystkich sprawach technicznych Ci pomogę. Z resztą przynajmniej
+          wskażę kierunek.
+        </p>
       </div>
     </Row>
   </Section>
 
   <Section class="bg-gray-light">
-    <Row>
-      <div class="flex flex-col items-start justify-center gap-8">
-        <div class="flex flex-col gap-4">
-          <h2>Ile kosztuje strona internetowa?</h2>
-          <p class="text-lg">
-            Nie podaję konkretnych cen, bo to zależy od wielu czynników. Staram
-            się robić naprawdę dobrą robotę i do tematu podchodzić odpowiednio i
-            kompleksowo, poznając Twoje realne problemy i potrzeby.
-          </p>
-        </div>
-        <div>
-          <p class="mb-2 text-lg font-bold">Cena zależy m.in. od</p>
-          <div
-            class="col-span-2 flex flex-row flex-wrap items-start gap-4 text-black">
-            {
-              [
-                "potrzeb, problemów i zaawansowania prac",
-                "ostatecznej liczby podstron",
-                "dodatkowych funkcjonalności",
-                "bazy projektowej",
-                "rodzaju i ilości stworzonej treści",
-                "dodatkowych materiałów",
-              ].map((item) => (
-                <div class="bg-gray-lightest px-4 py-2 text-gray-dark">
-                  {item}
-                </div>
-              ))
-            }
-          </div>
-        </div>
-        <div class="flex flex-col gap-4 self-stretch lg:flex-row">
-          <Button link="/kontakt">Opowiedz o swoim projekcie</Button>
-        </div>
-      </div><div>
-        <MyImage
-          src="pages/koszt-strony-www.webp"
-          alt="Osoba dokonuje obliczeń na kalkulatorze kosztów strony internetowej."
-        />
-      </div>
-    </Row>
-  </Section>
-
-  <Section>
     <Row
       ><div class="order-2 md:order-1">
         <MyImage
@@ -331,8 +422,56 @@ const schema: Schema = {}
             "Przekazanie witryny www",
           ]}
         />
+
+        <Button link="/kontakt">Opowiedz o swoim projekcie</Button>
       </div>
     </Row>
+  </Section>
+
+  <Section center class="">
+    <h2>Zobacz przykłady wdrożonych stron internetowych</h2>
+    <Row maxColumns={3} class="my-4" placement="items-stretch">
+      {
+        [
+          {
+            title: "Strona sprzedażowa miernika",
+            description:
+              "Stworzenie strony sprzedażowej niszowego produktu, ponad 2500 wyświetleń i sprzedaż +100%",
+            link: "/portfolio/strona-internetowa-miernika/",
+          },
+          {
+            title: "Moja aktualna strona www",
+            description:
+              "Stworzenie strony www na własne potrzeby. Ponad 1400 wyświetleń w kilka miesięcy.",
+            link: "/portfolio/moja-aktualna-strona-www/",
+          },
+          {
+            title: "Strona typu landing page dla systemu czytelnemenu",
+            description:
+              "Stworzenie prostej i przejrzystej strony dla nowego systemu",
+            link: "/portfolio/system-czytelne-menu/",
+          },
+        ].map((item) => (
+          <div class="relative flex flex-col gap-4 rounded bg-gray-light p-8 shadow-sm hover:bg-white">
+            <a
+              href={buildSlug(item.link)}
+              class="t-0 l-0 absolute block size-full"
+            />
+
+            <h3 class="text-h5 text-black">{item.title}</h3>
+            <p class="text-gray-dark">{item.description}</p>
+            <Button link={item.link} size="sm" class="self-start">
+              Zobacz opis projektu
+            </Button>
+          </div>
+        ))
+      }
+    </Row>
+    <div
+      class="flex flex-col gap-4 self-stretch md:flex-row md:self-start lg:self-center">
+      <Button link="/portfolio">Zobacz portfolio</Button>
+      <Button variant="secondary" link="/kontakt">Skontaktuj się</Button>
+    </div>
   </Section>
 
   <FAQ
@@ -345,9 +484,15 @@ const schema: Schema = {}
         ],
       },
       {
+        question: "Chcesz stronę www? Odpowiedz na te pytania.",
+        answer: [
+          "Po co Ci strona www? Na czym Ci zależy? Czym chcesz się wyróżniać? Czy strona ma zdobywać klientów, czy po prostu być? W jaki sposób ruch będzie sprowadzany na stronę? Czy SEO ma dla Ciebie znaczenie?",
+        ],
+      },
+      {
         question: "Ile kosztuje stworzenie strony internetowej?",
         answer: [
-          "Koszt stworzenia strony internetowej zależy od wielu czynników, takich jak liczba podstron, dodatkowe funkcjonalności oraz rodzaj treści. Zachęcam do zamówienia bezpłatnej wyceny, aby uzyskać dokładne informacje. Jestem tu po to, by Ci pomóc.",
+          "Koszt stworzenia strony internetowej zależy od wielu czynników, takich jak liczba podstron, dodatkowe funkcjonalności oraz rodzaj treści. Zachęcam do zamówienia bezpłatnej wyceny, aby uzyskać dokładne informacje.",
         ],
       },
       {
@@ -360,21 +505,16 @@ const schema: Schema = {}
         question:
           "Czy mogę samodzielnie zarządzać swoją stroną po jej stworzeniu?",
         answer: [
-          "To zależy od technologii. W przypadku Wordpress i Webflow nie ma problemu i pokażę Ci jak to zrobić. W przypadku astro jest nieco trudniej, ale tego typu strony zazwyczaj nie wymagają ciągłych zmian, a jedynie dodawania nowych treści.",
+          "Jak najbardziej - kwestia ustaleń i odpowiedniego wdrożenia. Jeśli jednak nie masz czasu lub wystarczających umiejętności technicznych - mogę robić to za Ciebie.",
         ],
       },
       {
         question: "Jak długo trwa proces tworzenia strony internetowej?",
         answer: [
-          "Czas realizacji zależy od złożoności projektu i dostarczenia niezbędnych materiałów. Standardowy proces tworzenia strony trwa od kilku dni do kilku tygodni.",
+          "Czas realizacji zależy od złożoności projektu i dostarczenia niezbędnych materiałów. Standardowy proces tworzenia strony trwa od 2 do 4 tygodni.",
         ],
       },
-      {
-        question: "Czy oferujesz wsparcie po zakończeniu projektu?",
-        answer: [
-          "Tak, oferuję opiekę techniczną (w przypadku wordpress) i monitorowanie strony po jej wdrożeniu (każda strona). Pomagam również w implementacji nowych funkcji oraz aktualizacji treści.",
-        ],
-      },
+
       {
         question:
           "Czy mogę skonsultować się przed zamówieniem strony internetowej?",

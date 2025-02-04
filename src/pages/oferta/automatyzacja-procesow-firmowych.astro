@@ -1,5 +1,6 @@
 ---
 import { Icon } from "astro-icon/components"
+import { buildSlug } from "~/utils/utils"
 
 import PageLayout from "@layouts/PageLayout.astro"
 import { type Meta } from "@components/core/MySEO.astro"
@@ -344,6 +345,46 @@ const meta: Meta = {
         ))
       }
     </Row>
+  </Section>
+
+  <Section center class="">
+    <h2>Zobacz przykłady wdrożonych automatyzacji</h2>
+    <Row maxColumns={3} class="my-4" placement="items-stretch">
+      {
+        [
+          {
+            title: "System tworzenia grafik promocyjnych",
+            description:
+              "Umożliwienie nawet małym sklepom tworzenia i publikowania materiałów promocyjnych.",
+            link: "/portfolio/system-tworzenia-grafik-promocyjnych/",
+          },
+          {
+            title: "Automatyzacja pobierania danych z sieci",
+            description:
+              "Uratowanie zlecenia klienta, uzyskanych ponad 36 000 rekordów i oszczędność nawet 100 godzin pracy",
+            link: "/portfolio/automatyczne-uzyskanie-danych-z-internetu/",
+          },
+        ].map((item) => (
+          <div class="relative flex flex-col gap-4 rounded bg-gray-light p-8 shadow-sm hover:bg-white">
+            <a
+              href={buildSlug(item.link)}
+              class="t-0 l-0 absolute block size-full"
+            />
+
+            <h3 class="text-h5 text-black">{item.title}</h3>
+            <p class="text-gray-dark">{item.description}</p>
+            <Button link={item.link} size="sm" class="self-start">
+              Zobacz opis projektu
+            </Button>
+          </div>
+        ))
+      }
+    </Row>
+    <div
+      class="flex flex-col gap-4 self-stretch md:flex-row md:self-start lg:self-center">
+      <Button link="/portfolio">Zobacz portfolio</Button>
+      <Button variant="secondary" link="/kontakt">Skontaktuj się</Button>
+    </div>
   </Section>
 
   <FAQ

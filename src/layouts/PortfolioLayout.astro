@@ -133,11 +133,7 @@ const { post, meta, schema } = Astro.props
       <div class="flex flex-row gap-4">
         {
           post.data.link && (
-            <Button
-              link={post.data.link}
-              rawLink
-              rel="nofollow"
-              target="_blank">
+            <Button link={post.data.link} rawLink target="_blank">
               Zobacz projekt
             </Button>
           )

@@ -1,4 +1,6 @@
 ---
+import { buildSlug } from "~/utils/utils"
+
 import PageLayout from "@layouts/PageLayout.astro"
 import { type Meta, type Schema } from "@components/core/MySEO.astro"
 
@@ -228,20 +230,64 @@ const schema: Schema = {}
             },
           ].map((item) => (
             <div class="flex flex-col gap-4 rounded bg-accent-light p-8 shadow last:bg-gray-light">
-              <>
-                <h3 class="text-h4">{item.title}</h3>
-                <p>{item.description}</p>
-                <div class="flex flex-row flex-wrap gap-2">
-                  {item.examples.map((example) => (
-                    <div class="bg-accent-lightest p-2">{example}</div>
-                  ))}
-                </div>
-              </>
+              <h3 class="text-h4">{item.title}</h3>
+              <p>{item.description}</p>
+              <div class="flex flex-row flex-wrap gap-2">
+                {item.examples.map((example) => (
+                  <div class="bg-accent-lightest p-2">{example}</div>
+                ))}
+              </div>
             </div>
           ))
         }
       </div>
     </Row>
+  </Section>
+
+  <Section center class="">
+    <h2>Zobacz przykłady wdrożonych narzędzi cyfrowych</h2>
+    <Row maxColumns={3} class="my-4" placement="items-stretch">
+      {
+        [
+          {
+            title: "System czytelnego menu",
+            description:
+              "Stworzenie prostej możliwości do umieszczenia czytelnego menu w sieci",
+            link: "/portfolio/system-czytelne-menu/",
+          },
+          {
+            title: "Symulacja ramienia robotycznego",
+            description:
+              "Pokaz możliwości symulacji z użyciem silnika gier komputerowych",
+            link: "/portfolio/symulacja-ramienia-robotycznego/",
+          },
+          {
+            title: "Program do organizacji wyświetlacza segmentowego",
+            description:
+              "Uproszczenie procesu organizacji i programowania napisów na wyświetlaczu",
+            link: "/portfolio/program-planowania-wyswietlacza-segmentowego/",
+          },
+        ].map((item) => (
+          <div class="relative flex flex-col gap-4 rounded bg-gray-light p-8 shadow-sm hover:bg-white">
+            <a
+              href={buildSlug(item.link)}
+              class="t-0 l-0 absolute block size-full"
+            />
+
+            <h3 class="text-h5 text-black">{item.title}</h3>
+            <p class="text-gray-dark">{item.description}</p>
+            <Button link={item.link} size="sm" class="self-start">
+              Zobacz opis projektu
+            </Button>
+          </div>
+        ))
+      }
+    </Row>
+    <div
+      class="flex flex-col gap-4 self-stretch md:flex-row md:self-start lg:self-center">
+      <Button link="/portfolio">Zobacz portfolio</Button>
+      <Button variant="secondary" link="/kontakt">Skontaktuj się</Button>
+    </div>
   </Section>
 
   <FAQ

@@ -172,113 +172,6 @@ const schema: Schema = {}
         skuteczność Twojej strony (sklepu) internetowej.
       </p>
     </div>
-    <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-      <div class="flex flex-col gap-4">
-        <h4>Co jest sprawdzane i oceniane</h4><p class="text-lg">
-          Skupiam się na naprawdę ważnych kwestiach, przez które potencjalnie
-          tracisz widoczność, wiarygodność, klientów i pieniądze.
-        </p>
-        <p class="text-gray">
-          Można się "czepiać" wielu różnych rzeczy, np. kolorów czy nierównych
-          odstępów. To wszystko wpływa na profesjonalizm i odbiór Twojej marki,
-          ale nie ma nic gorszego, gdy coś nie działa lub użytkownik nie wie, co
-          i jak ma zrobić.
-        </p>
-      </div><div
-        class="grid grid-cols-1 gap-8 lg:col-span-2 lg:grid-cols-2 xl:grid-cols-3">
-        {
-          [
-            {
-              icon: "tabler:eye-cancel",
-              text: "elementy wizualne",
-              description:
-                "czy strona nie ma rażących błędów wizualnych, które niszczą obraz firmy?",
-            },
-            {
-              icon: "tabler:shield-search",
-              text: "bezpieczeństwo",
-              description: "Czy strona jest bezpieczna i wzbudza zaufanie?",
-            },
-            {
-              icon: "tabler:brand-speedtest",
-              text: "szybkość",
-              description:
-                "Czy strona nie ładuje się zbyt wolno, zniechęcając potencjalnego klienta?",
-            },
-            {
-              icon: "tabler:layout",
-              text: "responsywność",
-              description:
-                "Czy strona wyświetla się dobrze zarówno na komórkach jak i komputerach?",
-            },
-            {
-              icon: "tabler:road-sign",
-              text: "intuicyjność",
-              description:
-                "Czy nawigacja i korzystanie ze strony jest intuicyjne? Czy są zachowane standardy?",
-            },
-            {
-              icon: "tabler:hammer",
-              text: "użyteczność",
-              description:
-                "Czy wszystko dostępne na stronie jest użyteczne i przydatne? Czy jest to wygodne?",
-            },
-            {
-              icon: "tabler:adjustments",
-              text: "funkcjonalność",
-              description:
-                "Czy wszystko działa tak, jak należy? Przyciski, linki, formularze?",
-            },
-            {
-              icon: "tabler:report-money",
-              text: "wartość",
-              description:
-                "Subiektywna ocena oczami potencjalnego klienta - czy są wszystkie niezbędne informacje? Czego mi brakuje?",
-            },
-            {
-              icon: "tabler:device-desktop-search",
-              text: "techniczne SEO",
-              description:
-                "Najważniejsze kwestie technicznego SEO wpływające na widoczność w sieci - indeksacja, canonical, tagi meta, nagłówki",
-            },
-          ].map((item, index) => (
-            <div class="flex flex-row items-center gap-2 text-accent-lightest">
-              <Icon name={item.icon} class="text-5xl" />
-              <span class="text-h5">{item.text}</span>
-              <button
-                data-popover-target={`function-description-${index}`}
-                data-popover-placement="bottom"
-                type="button">
-                <>
-                  <svg
-                    class="ms-2 h-4 w-4 text-accent hover:text-accent-dark"
-                    aria-hidden="true"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      fill-rule="evenodd"
-                      d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                  <span class="sr-only">Pokaż szczegóły</span>
-                </>
-              </button>
-              <div
-                data-popover
-                id={`function-description-${index}`}
-                role="tooltip"
-                class="text-whitee invisible absolute z-10 inline-block w-72 rounded bg-accent-dark text-sm opacity-0 shadow-sm transition-opacity duration-300">
-                <div class="space-y-2 p-4">
-                  <p>{item.description}</p>
-                </div>
-              </div>
-            </div>
-          ))
-        }
-      </div>
-    </div>
 
     <Row placement="items-start"
       ><div class="flex flex-col items-start justify-center">
@@ -320,9 +213,9 @@ const schema: Schema = {}
       </div><div class="">
         <MyImage src="pages/stop.webp" alt="Znak stop - droga bez przejazdu." />
       </div>
-    </div>
-    <div class="flex w-full flex-col gap-4 md:flex-row">
-      <Button link="/kontakt">Opowiedz o swoim projekcie</Button>
+      <div class="flex w-full flex-col gap-4 md:flex-row">
+        <Button link="/kontakt">Opowiedz o swoim projekcie</Button>
+      </div>
     </div>
   </Section>
 

@@ -66,7 +66,7 @@ const schema: Schema = {
         </div>
       </div><div>
         <MyImage
-          src="pages/hero.webp"
+          src="pages/hero2.webp"
           alt="Łukasz Miłoś"
           withOverlay
           loading="eager"
@@ -295,7 +295,27 @@ const schema: Schema = {
       </div>
     </Row>
   </Section>
-  <Section class="bg-gray-light"
+
+  <Section class="bg-accent-darkest text-white">
+    <Row placement="items-start"
+      ><div class="flex flex-col items-start justify-center">
+        <h2>Zobacz kilka moich przykładowych prac i rozwiązań</h2>
+      </div>
+
+      <div class="flex flex-col items-start justify-center gap-8">
+        <p class="text-lg">
+          Jakie problemy rozwiązałem? Jak to wykonałem i dlaczego tak, a nie
+          inaczej? Czy projekt zakończył się sukcesem?
+        </p>
+        <div class="flex flex-col gap-4 self-stretch md:flex-row md:self-start">
+          <Button link="/portfolio">Zobacz portfolio</Button>
+          <Button variant="tetriary" link="/kontakt">Skontaktuj się</Button>
+        </div>
+      </div>
+    </Row>
+  </Section>
+
+  <Section
     ><Row
       ><div class="flex flex-col items-start justify-center gap-8">
         <div class="flex flex-col gap-4">
@@ -305,11 +325,6 @@ const schema: Schema = {
             technologii. Charakteryzuję się dużym zaangażowaniem oraz szerokim
             spektrum zainteresowań i narzędzi, które ciągle poszerzam. Lubię
             nowe wyzwania.
-          </p>
-          <p class="text-lg">
-            Wiem też, co to ciężka, fizyczna i brudna praca (pył, kurz, brudne i
-            poprzecinane palce), nie tylko z prac gospodarczych, ale też z
-            pomocy tacie w warsztacie ślusarskim.
           </p>
         </div>
         <div class="flex flex-col gap-4 lg:flex-row">
@@ -332,32 +347,13 @@ const schema: Schema = {
         </div>
       </div><div>
         <MyImage
-          src="pages/hero2.webp"
+          src="pages/hero.webp"
           alt="Łukasz Miłoś - technik i inżynier IT."
           withOverlay
         />
       </div>
     </Row></Section
   >
-  <Section>
-    <Row placement="items-start"
-      ><div class="flex flex-col items-start justify-center">
-        <h2>Zobacz kilka moich przykładowych prac i rozwiązań</h2>
-      </div>
-
-      <div class="flex flex-col items-start justify-center gap-8">
-        <p class="text-lg">
-          Co do tej pory udało mi się zrobić? Jakie problemy rozwiązałem? Jak to
-          wykonałem i dlaczego tak, a nie inaczej? Czy projekt zakończył się
-          sukcesem?
-        </p>
-        <div class="flex flex-col gap-4 self-stretch md:flex-row md:self-start">
-          <Button link="/portfolio">Zobacz portfolio</Button>
-          <Button variant="secondary" link="/kontakt">Skontaktuj się</Button>
-        </div>
-      </div>
-    </Row>
-  </Section>
 
   <!-- CTA -->
   <CTA>
