@@ -64,45 +64,55 @@ const { post, meta, schema } = Astro.props
             <div class="grid w-full grid-cols-2 gap-4 rounded-md bg-accent-darkest p-6 text-white shadow-md lg:grid-cols-3">
               <div class="flex flex-col rounded-sm bg-accent-dark p-4 shadow-md">
                 <div class="flex flex-row items-center gap-2">
-                  <div class="text-5xl">{post.data.webMetrics.speed}</div>
+                  <div class="text-3xl md:text-4xl lg:text-5xl">
+                    {post.data.webMetrics.speed}
+                  </div>
                   <div class="text-accent-light">/100</div>
                 </div>
-                <span class="text-lg text-accent-lightest">Wydajność</span>
+                <span class="text-accent-lightest md:text-lg">Wydajność</span>
               </div>
               <div class="flex flex-col rounded-sm bg-accent-dark p-4 shadow-md">
                 <div class="flex flex-row items-center gap-2">
-                  <div class="text-5xl">
+                  <div class="text-3xl md:text-4xl lg:text-5xl">
                     {post.data.webMetrics.accessibility}
                   </div>
                   <div class="text-accent-light">/100</div>
                 </div>
-                <span class="text-lg text-accent-lightest">Dostępność</span>
+                <span class="text-accent-lightest md:text-lg">Dostępność</span>
               </div>
               <div class="flex flex-col rounded-sm bg-accent-dark p-4 shadow-md">
                 <div class="flex flex-row items-center gap-2">
-                  <div class="text-5xl">{post.data.webMetrics.technics}</div>
+                  <div class="text-3xl md:text-4xl lg:text-5xl">
+                    {post.data.webMetrics.technics}
+                  </div>
                   <div class="text-accent-light">/100</div>
                 </div>
-                <span class="text-lg text-accent-lightest">Techniki</span>
+                <span class="text-accent-lightest md:text-lg">Techniki</span>
               </div>
               <div class="flex flex-col rounded-sm bg-accent-dark p-4 shadow-md">
                 <div class="flex flex-row items-center gap-2">
-                  <div class="text-5xl">{post.data.webMetrics.seo}</div>
+                  <div class="text-3xl md:text-4xl lg:text-5xl">
+                    {post.data.webMetrics.seo}
+                  </div>
                   <div class="text-accent-light">/100</div>
                 </div>
-                <span class="text-lg text-accent-lightest">SEO</span>
+                <span class="text-accent-lightest md:text-lg">SEO</span>
               </div>
               <div class="flex flex-col rounded-sm bg-accent-dark p-4 shadow-md">
                 <div class="flex flex-row items-center gap-2">
-                  <div class="text-5xl">{post.data.webMetrics.views}</div>
+                  <div class="text-3xl md:text-4xl lg:text-5xl">
+                    {post.data.webMetrics.views}
+                  </div>
                 </div>
-                <span class="text-lg text-accent-lightest">Wyświetleń</span>
+                <span class="text-accent-lightest md:text-lg">Wyświetleń</span>
               </div>
               <div class="flex flex-col rounded-sm bg-accent-dark p-4 shadow-md">
                 <div class="flex flex-row items-center gap-2">
-                  <div class="text-5xl">{post.data.webMetrics.clicks}</div>
+                  <div class="text-3xl md:text-4xl lg:text-5xl">
+                    {post.data.webMetrics.clicks}
+                  </div>
                 </div>
-                <span class="text-lg text-accent-lightest">Kliknięć</span>
+                <span class="text-accent-lightest md:text-lg">Kliknięć</span>
               </div>
             </div>
           </>
