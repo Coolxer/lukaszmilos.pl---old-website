@@ -20,8 +20,8 @@ webMetrics:
   clicks: 0
 link: https://czytelnemenu.pl/
 category: www
-# videos:
-#   - https://www.youtube.com/embed/9IvBqwJMGvc?si=ULvhLZYmy_3xG9Mc
+videos:
+  - https://www.youtube.com/embed/U6yQ-UyC3Ys?si=YzfZ3EmtbN3yzfIZ
 draft: false
 ---
 
