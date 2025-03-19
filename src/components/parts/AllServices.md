@@ -30,7 +30,7 @@
 - opieka techniczna lub doraźna pomoc www
 - modernizacja, przeprojektowanie lub migracja strony
 - pomoc w zakresie hostingu i domeny
-- pomoc w zakresie analitycznym (podpięcie, konfiguracja) Google Search Console i Google Analytics
+- pomoc w zakresie analitycznym (podpięcie, konfiguracja) Google Search Console i prostej analityki
 
 ## Biznes
 

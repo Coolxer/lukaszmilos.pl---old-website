@@ -1,0 +1,121 @@
+<wpml-config>
+	<gutenberg-blocks>
+		<gutenberg-block type="greenshift-blocks/heading" translate="1" label="Advanced heading">
+			<xpath>//*[contains(@class, 'gspb_heading')]</xpath>
+			<key name="title" />
+			<key name="text" />
+			<key name="textbefore" />
+			<key name="textafter" />
+			<key name="headingContent" />
+			<key name="customAnchor" />
+			<key name="subTitle" />
+			<key name="animatedText">
+				<key name="*" />
+			</key>
+			<key name="dynamictext">
+				<key name="dynamicField" />
+			</key>	
+		</gutenberg-block>
+		<gutenberg-block
+			type="greenshift-blocks/text" translate="1" label="Advanced text">
+			<xpath>//*[contains(@class, 'gspb_text')]</xpath>
+			<key name="text" />
+			<key name="textContent" />
+			<key name="customAnchor" />
+			<key name="dynamictext">
+				<key name="dynamicField" />
+			</key>
+		</gutenberg-block>
+		<gutenberg-block
+			type="greenshift-blocks/button" translate="1" label="Advanced Button">
+			<xpath>//*[contains(@class, 'gspb_button_wrapper')]</xpath>
+			<key name="buttonContent" />
+			<key name="label" />
+			<key name="buttonLink" />
+			<key name="customAnchor" />
+			<key name="closeLabel" />
+			<key name="openLabel" />
+		</gutenberg-block>
+		<gutenberg-block
+			type="greenshift-blocks/buttonbox" translate="1" label="Advanced Button">
+			<xpath>//*[contains(@class, 'gspb_button_wrapper')]</xpath>
+			<key name="buttonContent" />
+			<key name="label" />
+			<key name="buttonLink" />
+			<key name="customAnchor" />
+			<key name="closeLabel" />
+			<key name="openLabel" />
+		</gutenberg-block>
+		<gutenberg-block
+			type="greenshift-blocks/iconlist" translate="1" label="Advanced List">
+			<xpath>//*[contains(@class, 'gspb_iconsList')]</xpath>
+			<key name="iconsList">
+				<key name="*">
+					<key name="content" />
+				</key>
+			</key>
+		</gutenberg-block>
+
+		<gutenberg-block
+			type="greenshift-blocks/accordionitem" translate="1">
+			<xpath>//*[contains(@class, 'gs-accordion-item__heading')]</xpath>
+			<key name="title" />
+		</gutenberg-block>
+
+		<gutenberg-block
+			type="greenshift-blocks/tabs" translate="1">
+			<xpath>//*[contains(@class, 'tabtitlelabel')]</xpath>
+			<key name="tabTitles">
+				<key name="title" />
+				<key name="subtitle" />
+			</key>
+		</gutenberg-block>
+
+		<gutenberg-block
+			type="greenshift-blocks/progressbar" translate="1">
+			<key name="title" />
+		</gutenberg-block>
+
+		<gutenberg-block type="greenshift-blocks/counter" translate="1" label="Counter">
+			<xpath>//*[contains(@class, 'wp-block-greenshift-blocks-counter')]</xpath>
+			<key name="label" />
+		</gutenberg-block>
+
+		<gutenberg-block type="greenshift-blocks/countdown" translate="1" label="Countdown">
+			<xpath>//*[contains(@class, 'gs-countdown')]</xpath>
+			<key name="labelDay" />
+			<key name="labelHour" />
+			<key name="labelMin" />
+			<key name="labelSec" />
+		</gutenberg-block>
+		
+		<gutenberg-block type="greenshift-blocks/social-share" translate="1" label="SocialLables">
+			<key name="socialLabels" >
+				<key name="fb" />
+				<key name="tw" />
+				<key name="pn" />
+				<key name="wa" />
+				<key name="tg" />
+				<key name="in" />
+				<key name="email" />
+				<key name="copy" />
+				<key name="copydone" />
+			</key>
+		</gutenberg-block>
+
+		<gutenberg-block
+			type="greenshift-blocks/element" translate="1" label="Elements">
+			<key name="textContent" />
+			<key name="tooltipText" />
+			<key name="alt" />
+			<key name="title" />
+			<key name="textAnimated">
+				<key name="*" />
+			</key>
+		</gutenberg-block>
+
+	</gutenberg-blocks>
+	<custom-fields>
+		<custom-field action="copy">_gspb_post_css</custom-field>
+	</custom-fields>
+</wpml-config>
