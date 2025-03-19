@@ -1,1 +1,0 @@
-<?php return array('dependencies' => array('content-control-components', 'content-control-fields', 'content-control-utils', 'lodash', 'react', 'wp-components', 'wp-compose', 'wp-element', 'wp-i18n', 'wp-primitives'), 'version' => '675f0f6615a33acd68e3');
