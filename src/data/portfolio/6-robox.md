@@ -1,6 +1,6 @@
 ---
 slug: symulacja-ramienia-robotycznego
-order: 9
+order: 10
 meta:
   title: Symulacja ramienia robotycznego
   description: Symulacja ramienia robotycznego stworzona w Unity i Blenderze, prezentuje możliwości sterowania i wizualizacji ruchu

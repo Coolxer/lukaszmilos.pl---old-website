@@ -1,6 +1,6 @@
 ---
 slug: system-czytelne-menu
-order: 4
+order: 5
 meta:
   title: System menu online dla restauracji i pizzerii
   description: Nowoczesne rozwiązanie dla restauracji - łatwe w obsłudze mini-strony z menu, poprawiające dostępność i jakość obsługi.
