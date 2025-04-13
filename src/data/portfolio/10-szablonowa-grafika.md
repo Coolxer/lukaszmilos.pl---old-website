@@ -1,6 +1,6 @@
 ---
 slug: szablonowa-grafika
-order: 7
+order: 8
 meta:
   title: System prostego tworzenia szablonowych grafik
   description: System ułatwiający proces  tworzenia szablonowych grafik np. na bloga, youtube, social media.

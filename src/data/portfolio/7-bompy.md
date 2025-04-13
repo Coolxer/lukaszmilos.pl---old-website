@@ -1,6 +1,6 @@
 ---
 slug: program-zestawienia-materialowego
-order: 10
+order: 11
 meta:
   title: Aplikacja do prowadzenia zestawienia materiałowego
   description: Aplikacja do zestawienia materiałowego napisana w Pythonie z użyciem Tkinter, ułatwia organizację i zarządzanie zasobami
