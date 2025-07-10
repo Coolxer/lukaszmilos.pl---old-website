@@ -100,7 +100,7 @@ export const blogSchema = z.object({
     //categories: z.array(z.string()).default(['brak kategorii']),
     categories: z
       .array(
-        z.enum(["brak kategorii", "biznes", "www", "cyfryzacja", "automatyzacja"])
+        z.enum(["brak kategorii", "biznes", "www", "cyfryzacja", "automatyzacja", "wskazówki"])
       )
       .default(["brak kategorii"]),
     // tags: z.array(z.string()).optional(),
