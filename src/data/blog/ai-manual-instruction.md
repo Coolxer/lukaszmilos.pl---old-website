@@ -12,9 +12,9 @@ image:
   src: ai-tworzy-instrukcje-montazu.webp
 categories:
   - automatyzacja
-date: 2025-07-14
-#video: https://www.youtube.com/embed/Uq9ldtfp3Dk?si=wGqJqoX6wprU-YM7
-draft: true
+date: 2025-07-13
+video: https://www.youtube.com/embed/w1Jg8uUR2as?si=qPU8kkokaSVOSzMS
+draft: false
 ---
 
 ## Wyzwanie: instrukcja montażu łóżka
