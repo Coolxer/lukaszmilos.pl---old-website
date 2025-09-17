@@ -12,8 +12,8 @@ image:
 categories:
   - automatyzacja
 date: 2025-09-17
-video: https://www.youtube.com/embed/TutajWklejIdWideo?si=TutajWklejIdWideo
-draft: true
+video: https://www.youtube.com/embed/9EQ4jrOoKP4?si=1bb89puR121b2CqM
+draft: false
 ---
 
 ## Dlaczego standardowe linki z Google Drive nie działają w automatyzacjach?
