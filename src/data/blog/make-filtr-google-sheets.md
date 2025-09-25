@@ -12,8 +12,8 @@ image:
 categories:
   - automatyzacja
 date: 2025-09-25
-video: https://www.youtube.com/embed/TutajWklejIdWideo?si=TutajWklejIdWideo
-draft: true
+video: https://www.youtube.com/embed/wYoIwWBlAjo?si=FYOYtrVY42uxUWRj
+draft: false
 ---
 
 ## Pozornie prosty problem, który sprawia trudność
