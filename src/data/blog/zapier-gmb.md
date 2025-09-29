@@ -12,8 +12,8 @@ image:
 categories:
   - automatyzacja
 date: 2025-09-28
-video: https://www.youtube.com/embed/TutajWklejIdWideo?si=TutajWklejIdWideo
-draft: true
+video: https://www.youtube.com/embed/3MbTboW9Njs?si=cgHFMCOH7Zo1NWCa
+draft: false
 ---
 
 ## Zapier: Łatwość i szybkość ponad wszystko
