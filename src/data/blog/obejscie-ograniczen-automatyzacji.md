@@ -12,8 +12,8 @@ image:
 categories:
   - automatyzacja
 date: 2025-10-01
-video: https://www.youtube.com/embed/TutajWklejIdWideo?si=TutajWklejIdWideo
-draft: true
+video: https://www.youtube.com/embed/dG-OBYONo2g?si=jcYf-UGT2JxU0yR_
+draft: false
 ---
 
 ## Problem: Droga integracja i brak API
