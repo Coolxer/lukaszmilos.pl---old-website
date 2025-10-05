@@ -11,9 +11,9 @@ image:
   src: tallyso-light-dark-mode.webp
 categories:
   - www
-date: 2025-10-04
-video: https://www.youtube.com/embed/TutajWklejIdWideo?si=TutajWklejIdWideo
-draft: true
+date: 2025-10-05
+video: https://www.youtube.com/embed/gBxOFYVXVGk?si=7y2q9oW8oGQFdgdh
+draft: false
 ---
 
 ## Stary sposób: ręczna stylizacja formularza, która nie działa
