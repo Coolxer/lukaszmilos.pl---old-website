@@ -12,8 +12,8 @@ image:
 categories:
   - automatyzacja
 date: 2025-10-10
-video: https://www.youtube.com/embed/TutajWklejIdWideo?si=TutajWklejIdWideo
-draft: true
+video: https://www.youtube.com/embed/lV6neXm020E?si=mesHZ_XIeDB65SIC
+draft: false
 ---
 
 ## Moje rozwiązanie: automatyzacja, która planuje za Ciebie
